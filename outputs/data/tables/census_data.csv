@@ -1,0 +1,33 @@
+Gender,Age group,Education,Average,Minimum,Maximum
+Female,18 - 29,Bachelor,2538,467,13842
+Female,18 - 29,Graduate Diploma,2834,1143,4543
+Female,18 - 29,High School,5342,2918,13821
+Female,18 - 29,Postgraduate,485,44,3579
+Female,30 - 44,Bachelor,4295,1167,10528
+Female,30 - 44,Graduate Diploma,4660,2710,6945
+Female,30 - 44,High School,4110,1461,6985
+Female,30 - 44,Postgraduate,1405,167,5462
+Female,45 - 60,Bachelor,2444,1010,6204
+Female,45 - 60,Graduate Diploma,4276,2483,5851
+Female,45 - 60,High School,5848,2030,8965
+Female,45 - 60,Postgraduate,757,169,2497
+Female,60+,Bachelor,1511,430,3772
+Female,60+,Graduate Diploma,2599,906,4583
+Female,60+,High School,9159,2599,14643
+Female,60+,Postgraduate,374,62,1288
+Male,18 - 29,Bachelor,1767,201,11171
+Male,18 - 29,Graduate Diploma,3223,1281,5171
+Male,18 - 29,High School,5902,3053,12467
+Male,18 - 29,Postgraduate,331,16,2646
+Male,30 - 44,Bachelor,3081,592,11109
+Male,30 - 44,Graduate Diploma,5498,2657,9939
+Male,30 - 44,High School,4042,1842,7470
+Male,30 - 44,Postgraduate,1289,109,5722
+Male,45 - 60,Bachelor,1958,603,5642
+Male,45 - 60,Graduate Diploma,5435,2452,8082
+Male,45 - 60,High School,4651,1963,8278
+Male,45 - 60,Postgraduate,852,142,3464
+Male,60+,Bachelor,1461,402,4580
+Male,60+,Graduate Diploma,4821,1726,9467
+Male,60+,High School,5857,2286,11259
+Male,60+,Postgraduate,595,102,2360

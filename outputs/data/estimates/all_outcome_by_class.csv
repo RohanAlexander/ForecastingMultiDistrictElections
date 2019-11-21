@@ -1,0 +1,8 @@
+Classification,Share,Actual,LinA-based,SmartVote-based
+Safe loss,<0.4,42,9,NA
+Fairly safe loss,0.4-0.44,18,20,9
+Marginal loss,0.44-0.47,15,31,10
+Too close to call,0.47-0.53,19,62,39
+Marginal win,0.53-0.57,12,14,25
+Fairly safe win,0.57-0.6,17,8,33
+Safe win,>0.6,28,7,35
