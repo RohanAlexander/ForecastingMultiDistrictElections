@@ -9,4 +9,4 @@ The overall outcome of an election in a parliamentary system turns on the number
 ## To do
 - (Patrick) Get education and unemployment.
 - (Rohan) Add the Pat^2 idea of getting an estimate of the number of people that it would take to make the results equivalent.
-
+- look at paper in terms of framing towards an Aussie polling audience (Pat)
