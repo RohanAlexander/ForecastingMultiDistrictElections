@@ -5,7 +5,7 @@
 #### Contact ####
 # Author: Rohan Alexander
 # Contact: rohan.alexander@utoronto.ca
-# Last updated: 29 September 2010
+# Last updated: 23 November 2010
 
 
 #### Workspace setup ####
@@ -31,14 +31,14 @@ results_2019_first_prefs <- read_csv("inputs/data/election_2019/HouseFirstPrefsB
 
 #### Individual-level model ####
 # Model
-SmartVote_model <- brm(ALP_supporter ~ gender + age_group + (1|division), 
+priors_simple <- set_prior("normal(0,1)", class = "b") + set_prior("normal(0,3)", class="Intercept")
+SmartVote_model <- brm(ALP_supporter ~ gender + age_group + education + (1|division), 
                    data = SmartVote_regression_data, 
                    family = bernoulli(),
+                   prior = priors_simple,
                    cores = number_of_cores,
-                   file = "outputs/models/SmartVote_testre")
-# 
-# priors_simple <- set_prior("normal(0,1)", class = "b") + set_prior("normal(0,3)", class="Intercept")
-# 
+                   file = "outputs/models/SmartVote")
+
 # SmartVote_model_state <- brm(ALP_supporter ~ gender + age_group + (state / division), 
 #                        data = SmartVote_regression_data, 
 #                        family = bernoulli(),
@@ -75,12 +75,13 @@ broom::tidy(SmartVote_model, par_type = "non-varying") %>%
                           Term == "genderMale" ~ "Is male",
                           Term == "age_groupages30to44" ~ "Age 30-44",
                           Term == "age_groupages45to59" ~ "Age 45-59",
-                          Term == "age_groupages60plus" ~ "Age 60+")
+                          Term == "age_groupages60plus" ~ "Age 60+",
+                          Term == "educationgradDipDipCertIIIandIV" ~ "Grad dip.",
+                          Term == "educationhighSchoolorCertIorIIorLess" ~ "High school",
+                          Term == "educationpostgraduateDegree" ~ "Post grad.")
          ) %>% 
-  rbind(tibble(Term = c("High school", "Grad dip.", "Post grad."),
-               Estimate = c("", "", ""),
-               `Std. Error` = c("", "", ""),
-               Lower = c("", "", ""),
-               Upper = c("", "", ""))
-        ) %>% 
+  mutate(ordering = c(1, 2, 3, 4, 5, 7, 6, 8)) %>% 
+  arrange(ordering) %>% 
+  select(-ordering) %>%
   write_csv("outputs/data/estimates/SmartVote_coefficients.csv")
+

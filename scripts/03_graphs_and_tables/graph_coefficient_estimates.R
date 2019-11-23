@@ -38,7 +38,10 @@ SmartVote_model_coefficients <-
                                            `Is male` = "genderMale",
                                            `Age 30-44` = "age_groupages30to44",
                                            `Age 45-59` = "age_groupages45to59",
-                                           `Age 60+` = "age_groupages60plus"))
+                                           `Age 60+` = "age_groupages60plus",
+                                           `High school` = "educationhighSchoolorCertIorIIorLess",
+                                           `Grad dip.` = "educationgradDipDipCertIIIandIV",
+                                           `Post grad.` = "educationpostgraduateDegree"))
 SmartVote_model_coefficients$Type <- "Smartvote Australia"
 
 LinA_model_coefficients <- 
@@ -92,6 +95,4 @@ both %>%
 
 
 ggsave("outputs/figures/coefficientdistributions.pdf", width = 20, height = 10, units = "cm")
-
-
 

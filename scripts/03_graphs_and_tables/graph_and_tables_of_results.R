@@ -100,7 +100,7 @@ both %>%
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  theme(legend.position = "bottom") +
+  theme(legend.position = "bottom")
   # coord_flip()
 
 ggsave("outputs/figures/estimates/raw_data_compared_with_model_estimates.pdf",
@@ -204,7 +204,7 @@ both <-
   both %>% 
   select(Classification, Share, everything())
 
-write_csv(all, "outputs/data/estimates/all_outcome_by_class.csv")
+write_csv(both, "outputs/data/estimates/all_outcome_by_class.csv")
 
 
 

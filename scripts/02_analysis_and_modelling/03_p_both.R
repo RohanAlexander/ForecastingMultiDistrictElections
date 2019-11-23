@@ -16,7 +16,7 @@ library(tidybayes)
 library(tidyverse)
 
 poststratification_data <- read_csv("outputs/data/poststratification_data/census_data.csv")
-preferences_data <- read_csv("outputs/data/data_from_earlier_elections_on_2019_div_basis.csv")
+preferences_data <- read_csv("outputs/data/elections/data_from_earlier_elections_on_2019_div_basis.csv")
 results_2019_TPP <- read_csv("inputs/data/election_2019/HouseTppByDivisionDownload-24310.csv",
                              skip = 1)
 results_2019_first_prefs <- read_csv("inputs/data/election_2019/HouseFirstPrefsByCandidateByVoteTypeDownload-24310.csv",
@@ -39,16 +39,9 @@ post_stratified_posterior_estimates_LinA <-
   ungroup()
 
 # Now Smartvote
-# Account for no education data yet.
-poststratification_data_smartvote <- 
-  poststratification_data %>% 
-  group_by(division, gender, age_group) %>% 
-  summarise(number = sum(number),
-            cell_proportion_of_division_total = sum(cell_proportion_of_division_total))
-
 post_stratified_posterior_estimates_Smartvote <- 
   SmartVote_model %>% 
-  tidybayes::add_predicted_draws(newdata = poststratification_data_smartvote, allow_new_levels = TRUE) %>% 
+  tidybayes::add_predicted_draws(newdata = poststratification_data, allow_new_levels = TRUE) %>% 
   rename(alp_predict = .prediction) %>% 
   mutate(alp_predict_prop = alp_predict*cell_proportion_of_division_total) %>% 
   group_by(division, .draw) %>% 
@@ -66,7 +59,6 @@ post_stratified_posterior_estimates_both <- rbind(
 rm(post_stratified_posterior_estimates_Smartvote,
    post_stratified_posterior_estimates_LinA,
    poststratification_data,
-   poststratification_data_smartvote,
    LinA_model,
    SmartVote_model
    )

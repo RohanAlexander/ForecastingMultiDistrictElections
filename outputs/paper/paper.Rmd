@@ -272,7 +272,7 @@ summary_stats %>%
         booktabs = TRUE, 
         digits = 2, 
         format.args = list(big.mark = ","),
-        caption = "First preferences from the Smartvote Australia and Life in Australia datasets, by state",
+        caption = "First preferences from the survey datasets, by state",
         linesep = ""
         )  
 # %>% 
@@ -313,7 +313,8 @@ LINA_summary_agegroups <- LINA_summary_agegroups %>%
 
 LINA_summary_education <- read_csv(here::here("outputs/data/tables/education_surveyed.csv")) %>% 
   rename(Class = Education) %>% 
-  mutate(Type = c("Education", "", "", "", "")) %>% 
+  filter(Class != "Unknown") %>% 
+  mutate(Type = c("Education", "", "", "")) %>% 
   select(Type, Class, Number, Proportion)
 
 LINA_summary_education$Class[LINA_summary_education$Class == "highSchoolorCertIorIIorLess"] <- "High school"
@@ -353,10 +354,19 @@ SmartVote_summary_agegroups <- SmartVote_summary_agegroups %>%
 
 
 
-SmartVote_summary_education <- tibble(Type = c("Education", "", "", "", ""),
-                                      Class = c("High school", "Grad. dip.", "Bachelor", "Postgraduate", "Unknown"),
-                                      Number = c("-", "-", "-", "-", "-"),
-                                      Proportion = c("-", "-", "-", "-", "-"))
+
+SmartVote_summary_education <- read_csv(here::here("outputs/data/tables/SmartVote-education_surveyed.csv")) %>% 
+  rename(Class = Education) %>% 
+  mutate(arranger = c(3, 4, 2, 1)) %>% 
+  arrange(arranger) %>% 
+  mutate(Type = c("Education", "", "", "")) %>% 
+  select(Type, Class, Number, Proportion)
+
+SmartVote_summary_education$Class[SmartVote_summary_education$Class == "highSchoolorCertIorIIorLess"] <- "High school"
+SmartVote_summary_education$Class[SmartVote_summary_education$Class == "gradDipDipCertIIIandIV"] <- "Grad. dip."
+SmartVote_summary_education$Class[SmartVote_summary_education$Class == "bachelorDegree"] <- "Bachelor"
+SmartVote_summary_education$Class[SmartVote_summary_education$Class == "postgraduateDegree"] <- "Postgraduate"
+
 
 
 SmartVote_summary <- rbind(SmartVote_summary_states,
@@ -380,7 +390,7 @@ both %>%
         booktabs = TRUE,
         digits = 2, 
         format.args = list(big.mark = ","),
-        caption = "Descriptive statistics of the datasets.",
+        caption = "Descriptive statistics of the datasets",
         linesep = ""
         )%>% 
   kableExtra::add_header_above(c(" " = 2, "Life in Australia" = 2, "Smartvote" = 2))
@@ -397,7 +407,7 @@ The Smartvote Australia voter advice application is a survey that attempts to el
 
 The data from voter advice applications have been used in the context of MRP, including by @Popp2016. While the use of voter advice applications has been found to increase participation in elections [@GermannGemenis2019], compulsory voting in Australia should negate much of that effect. There are some concerns around endogeneity as it has been found that voter advice applications may cause a small number of voters to change the party they vote for based on the advice of the application [@Kleinnijenhuis2019]. There are also concerns around the nature of the questions asked. Specifically, Smartvote Australia asked respondents to rank how likely they were to vote for a particular party. To a certain extent, therefore, this is a utility measure rather than a singular choice. Additionally, there are some respondents who have all of the parties ranked equally. @vandereijk2006 expands on some of these issues.
 
-After cleaning and adjustment we have 58,972 responses. 
+After cleaning and adjustment we have 53,310 responses. 
 
 <!-- The dataset that we use here was gathered between X and Y.[^datesfix] @dumont2019 provides further details about survey specifics. -->
 
