@@ -95,9 +95,9 @@ Our framework to characterise the usefulness of a forecasting model of multi-dis
 
 
 ## Reasonable estimates of electoral division counts
-The first aspect of our framework is that a useful forecasting model of multi-district elections provides probabilistic output from an interpretable model that is ex anti consistent with the available evidence and ex post only inaccurate for discernable reasons. 
+The first aspect of our framework is that a useful forecasting model of multi-district elections provides probabilistic output from an interpretable model that is ex ante consistent with the available evidence and ex post only inaccurate for discernable reasons. 
 
-A reasonable model must be interpretable because it is unavoidably partially assessed on its explanatory value, as elections occur only every few years. @dowding2019prediction [p. 1,001] distinguish between 'pragmatic prediction' which is what we have engaged in here, and 'scientific prediction', and argue that '[a]ssessing how good [pragmatic] predictions are is based on how closely the assigned probabilities match what actually happens.' But given how irregular and idiosyncratic each election is, a useful forecasting model would also engage in 'scientific prediction', in which the explanatory value of the model is also important. Although substantial improvements to a useful forecasting model of multi-district elections would occur after each election, an interpretable model allows continuous smaller-scale improvements. Additionally, one reason that political opinion polling occurs is so that campaigns and the media can use it. An uninterpretable model would be limiting in this regard.
+A reasonable model must be interpretable because it is unavoidably partially assessed on its explanatory value, as elections occur only every few years. @dowding2019prediction [p. 1,001] distinguish between 'pragmatic prediction' which is what we have engaged in here, and 'scientific prediction', and argue that '[a]ssessing how good [pragmatic] predictions are is based on how closely the assigned probabilities match what actually happens.' But given how irregular and idiosyncratic each election is, a useful forecasting model would also engage in 'scientific prediction', in which the explanatory value of the model is also important. Although substantial improvements to a useful forecasting model of multi-district elections would occur after each election, an interpretable model allows continuous smaller-scale improvements. <!--Additionally, one reason that political opinion polling occurs is so that campaigns and the media can use it. An uninterpretable model would be limiting in this regard. -->
 
 Probabilistic outputs mean that uncertainty is an inseparable aspect of the results. This is important when the occurrence of anything other than the central estimate would have significant effects; hence critical in a multi-district elections setting. The shift to probabilistic results has occurred in a variety of fields and scenarios, for instance, the United Nations moved toward probabilistic population projections in recent years [@raftery2014bayesian]. 
 
@@ -113,11 +113,11 @@ If a model does not explicitly output electoral division counts by party then it
 
 
 
-## Account for preferences or turnout
+## Account for features of the electoral system
 
 The second aspect of our framework for evaluating the reasonableness of a model for forecasting multi-district elections is that is accounts for preferences, or turnout, as appropriate, in a way that propagates uncertainty.
 
-Preferences are crucial in Australian elections, and much effort is spent when conducting political opinion polling to decide how best to distribute them for their estimates. It is easy to do this in a deterministic way, for instance, by assuming that what happened last election happens again, or to assume some other reasonable sounding but similar approach. We argue that a useful forecasting model would account for preferences in a probabilistic way.
+Australia's election system follows a preferenctial voting system, in which an instant runoff election is held for each election. Estimating the distribution of preference flows from eliminated candidates is crucial to predicting the results Australian elections. It is easy to do this in a deterministic way, for instance, by assuming that what happened last election happens again, or to assume some other reasonable sounding but similar approach. We argue that a useful forecasting model would account for preferences in a probabilistic way.
 
 The most important reason for this is the propagation of uncertainty. If preferences are not probabilistically modelled in some way, then the resulting forecasts are likely to be too confident in the central estimates. One way to see whether this is likely to be done is whether the estimates of the two-party-preferred shares are more distributed than the first-preferences shares.
 
@@ -127,16 +127,13 @@ The issues around preferences in Australia are relevant to turnout in many other
 
 
 
-
-
-
 ## Transparency, reproducibility, and replicability
 
 The third aspect of a useful forecasting model of multi-district elections is that it is reproducible when, and in as similar manner as possible, it is made public, and that, further, ideally it would be replicable.
 
-Reproducibility refers to the ability of a third-party to repeat a process and get essentially the same outcome. This is the minimum that is required of credible modern quantitative approaches, and in its absence credibility requires 'trust in the confidence or authority of the originator' [@munafo2017manifesto, p. 5]. Given how easy it is for the incentives of those forecasting multi-district elections to be questioned we contend reproducibility also ought to be the minimum required of a useful forecasting model for multi-district elections. But given general practise, we would suggest that greater transparency is needed before reproducibility is possible. To a certain extent, recommendations from industry associations such as the American Association for Public Opinion Research (AAORP) or, in Australia, the Association of Market and Social Research Organisations (AMSRO) are also concerned with this.
+Reproducibility refers to the ability of a third-party to repeat a process and get essentially the same outcome. This is the minimum that is required of credible modern quantitative approaches, and in its absence credibility requires 'trust in the confidence or authority of the originator' [@munafo2017manifesto, p. 5]. Given how easy it is for the incentives of those forecasting multi-district elections to be questioned we contend reproducibility also ought to be the minimum required of a useful forecasting model for multi-district elections. But given general practise, we would suggest that greater transparency is needed before reproducibility is possible. <!--To a certain extent, recommendations from industry associations such as the American Association for Public Opinion Research (AAORP) or, in Australia, the Association of Market and Social Research Organisations (AMSRO) are also concerned with this. -->
 
-@jamieson2019signaling [p. 19,233] describe transparency '[a]s a prerequisite to scrutiny' and argue that it allows 'others to examine study design, execution, and data and, as a result, replicate results.' However, we go further than @jamieson2019signaling and argue that a useful forecasting model would not just require '[a]rchiving data and analysis plans in publicly available repositories', but would also impose a timing and access constraint. Specifically, the data and analysis of a useful forecasting model of multi-district elections must be available at the same time as any public release relating to the forecasting model, be that an academic research paper or press coverage, and it must be just as easily accessed. For instance, it is not enough that datasets and analysis be available on request, if the coverage of the forecasting model is in the media; they must be able to be accessed as easily as the media, for instance in a publicly available repository.
+@jamieson2019signaling [p. 19,233] describe transparency '[a]s a prerequisite to scrutiny' and argue that it allows 'others to examine study design, execution, and data and, as a result, replicate results.' However, we go further than @jamieson2019signaling and argue that a useful forecasting model would not just require '[a]rchiving data and analysis plans in publicly available repositories', but would also impose a timing and access constraint. Specifically, the data and analysis of a useful forecasting model of multi-district elections must be available at the same time as any public release relating to the forecasting model, be that an academic research paper or press coverage, and it must be just as easily accessed. <!--For instance, it is not enough that datasets and analysis be available on request, if the coverage of the forecasting model is in the media; they must be able to be accessed as easily as the media, for instance in a publicly available repository.-->
 
 
 
@@ -144,13 +141,13 @@ Reproducibility refers to the ability of a third-party to repeat a process and g
 ## Appropriate communication of results
 
 The fourth aspect of a useful forecasting model of multi-district elections is that its central results should be inextricably linked to their distribution, and these results should be communicated in a way that does not rely on an audience being statistically fluent. 
-Although political opinion polls regularly include some measure of confidence, this tends to be separable from the central estimate, and in practice, regularly is [@larsen2019transforming]. While this is understandable given the constraints faced by journalists [@ricketson2019like] and the difficulty that even experts have appreciating the nuances of statistical concepts [@hoekstra2018improving; @greenland2016statistical], a useful model would account not allow this to happen.
+Although political opinion polls regularly include some measure of confidence, this tends to be separable from the central estimate, and in practice, regularly is [@larsen2019transforming]. 
 
 In another context @vehtari2019limitations [p. 22] argue that '[t]he most pernicious idea in statistics is the idea that we can produce a single-number summary of any data set and this will be enough to make a decision.' And yet, this is essentially what much of political opinion polling does. Even when the confidence intervals are reported, the results are usually able to be read without these. We contend that in a useful forecasting model the central estimates would be inseparable from their distributional aspects. 
 
 Further, as poll-of-poll models increased in popularity, analysts increasingly began to report overall estimates in terms of probabilities. But firstly, in an Australian context, the overall result of an election is essentially a Bernoulli random variable, and so claiming success when a party wins where the  model gave that party a probability of 0.2 is disingenuous. Even if this wasn't the case, there is considerable evidence that it is extremely difficult to correctly interpret probabilities [@handmer2007communicating], and that this can have an effect on electoral behaviour [@westwood2019projecting]. 
 
-Finally, the results of a useful forecasting model should not require statistical fluency to understand. Misunderstandings on the part of consumers of estimates are, to a large extent, the responsibility of those who produce estimates.
+While the tendancy to downplay uncertainty is understandable given the constraints faced by journalists [@ricketson2019like] and the difficulty that even experts have appreciating the nuances of statistical concepts [@hoekstra2018improving; @greenland2016statistical], the results of a useful forecasting model should not require statistical fluency to understand. Misunderstandings on the part of consumers of estimates are, to a large extent, the responsibility of those who produce estimates. To make the impact of uncertainty clear, communication of a model should explicitly account for areas of uncertainty in layman's terms by, for example, reporting districts that are too close to call. 
 
 
 
@@ -272,7 +269,7 @@ summary_stats %>%
         booktabs = TRUE, 
         digits = 2, 
         format.args = list(big.mark = ","),
-        caption = "First preferences from the Smartvote Australia and Life in Australia datasets, by state",
+        caption = "First preferences from the survey datasets, by state",
         linesep = ""
         )  
 # %>% 
@@ -313,7 +310,8 @@ LINA_summary_agegroups <- LINA_summary_agegroups %>%
 
 LINA_summary_education <- read_csv(here::here("outputs/data/tables/education_surveyed.csv")) %>% 
   rename(Class = Education) %>% 
-  mutate(Type = c("Education", "", "", "", "")) %>% 
+  filter(Class != "Unknown") %>% 
+  mutate(Type = c("Education", "", "", "")) %>% 
   select(Type, Class, Number, Proportion)
 
 LINA_summary_education$Class[LINA_summary_education$Class == "highSchoolorCertIorIIorLess"] <- "High school"
@@ -353,10 +351,19 @@ SmartVote_summary_agegroups <- SmartVote_summary_agegroups %>%
 
 
 
-SmartVote_summary_education <- tibble(Type = c("Education", "", "", "", ""),
-                                      Class = c("High school", "Grad. dip.", "Bachelor", "Postgraduate", "Unknown"),
-                                      Number = c("-", "-", "-", "-", "-"),
-                                      Proportion = c("-", "-", "-", "-", "-"))
+
+SmartVote_summary_education <- read_csv(here::here("outputs/data/tables/SmartVote-education_surveyed.csv")) %>% 
+  rename(Class = Education) %>% 
+  mutate(arranger = c(3, 4, 2, 1)) %>% 
+  arrange(arranger) %>% 
+  mutate(Type = c("Education", "", "", "")) %>% 
+  select(Type, Class, Number, Proportion)
+
+SmartVote_summary_education$Class[SmartVote_summary_education$Class == "highSchoolorCertIorIIorLess"] <- "High school"
+SmartVote_summary_education$Class[SmartVote_summary_education$Class == "gradDipDipCertIIIandIV"] <- "Grad. dip."
+SmartVote_summary_education$Class[SmartVote_summary_education$Class == "bachelorDegree"] <- "Bachelor"
+SmartVote_summary_education$Class[SmartVote_summary_education$Class == "postgraduateDegree"] <- "Postgraduate"
+
 
 
 SmartVote_summary <- rbind(SmartVote_summary_states,
@@ -380,7 +387,7 @@ both %>%
         booktabs = TRUE,
         digits = 2, 
         format.args = list(big.mark = ","),
-        caption = "Descriptive statistics of the datasets.",
+        caption = "Descriptive statistics of the datasets",
         linesep = ""
         )%>% 
   kableExtra::add_header_above(c(" " = 2, "Life in Australia" = 2, "Smartvote" = 2))
@@ -397,7 +404,7 @@ The Smartvote Australia voter advice application is a survey that attempts to el
 
 The data from voter advice applications have been used in the context of MRP, including by @Popp2016. While the use of voter advice applications has been found to increase participation in elections [@GermannGemenis2019], compulsory voting in Australia should negate much of that effect. There are some concerns around endogeneity as it has been found that voter advice applications may cause a small number of voters to change the party they vote for based on the advice of the application [@Kleinnijenhuis2019]. There are also concerns around the nature of the questions asked. Specifically, Smartvote Australia asked respondents to rank how likely they were to vote for a particular party. To a certain extent, therefore, this is a utility measure rather than a singular choice. Additionally, there are some respondents who have all of the parties ranked equally. @vandereijk2006 expands on some of these issues.
 
-After cleaning and adjustment we have 58,972 responses. 
+After cleaning and adjustment we have 53,310 responses. 
 
 <!-- The dataset that we use here was gathered between X and Y.[^datesfix] @dumont2019 provides further details about survey specifics. -->
 
@@ -469,7 +476,8 @@ Our model focuses on whether the Australian Labor Party is likely to win a parti
 
 In our model, the electoral divisions used at the 2019 Federal Election are denoted by $d \in [1, 2,\ldots, 151]$; individual survey respondents 'individuals' are denoted by $i \in [1, 2,\ldots, I]$; political parties are denoted by $p \in [1, 2, 3, 4]$, where party 1 is the Australian Labor Party, party 2 comprises the Liberal and National parties, party 3 is the Greens, and party 4 comprises all other parties and independents, so that $P=4$; and the demographic and other 'characteristics' are denoted by $c \in [1, 2, 3]$, where characteristic 1 is gender, characteristic 2 is age-group, and characteristic 3 is highest education obtained. 
 
-The combination of the levels of the characteristics characterise the sub-groups that are used for post-stratification. In this case, there are two categories for gender, four categories for age-group, and four categories for highest education obtained, so there are thirty-two sub-groups, denoted by $c \in [1, 2, \ldots, C]$, where $C=32$. The number of people in each sub-group for each electoral division is similarly denoted $N_c$. We discard informal votes. In this set-up, $\mbox{2PP}_{d,p=1}$ is the Australian Labor Party's two-party-preferred share in electoral division $d$.
+The combination of the levels of the characteristics characterise the sub-groups that are used for post-stratification. In this case, there are two categories for gender, four categories for age-group, and four categories for highest education obtained, so there are thirty-two sub-groups, denoted by $c \in [1, 2, \ldots, C]$, where $C=32$. The number of people in each sub-group for each electoral division is similarly denoted $N_c$. Informal votes (also known as invalid or spolit ballots in other jurisdictions) were discarded. In this set-up, $\mbox{2PP}_{d,p=1}$ is the Australian Labor Party's two-party-preferred share in electoral division $d$.
+
 
 
 We will now discuss each component of our model, starting with individual responses and building up toward electoral-division-level estimates of two-party-preferred.
@@ -554,7 +562,7 @@ knitr::include_graphics(here::here("outputs/figures/coefficientdistributions.pdf
 ```
 
 
-At this stage of our approach, the model is being trained on the raw datasets, and these results are not yet post-stratified. We have more to say about this in Section \ref{discussion}, but ours is first and foremost a forecasting rather than explanatory model, nonetheless there is value in examining the results for reasonableness. The estimates are in relation to how likely a respondent is to support the Australian Labor Party. In the case of both datasets, males are expected to be less likely to support the Australian Labor Party. Monotonically, respondents in older age-groups are more likely to support the Australian Labor Party in the Smartvote Australia dataset, but there is no monotonic trend in the Life in Australia dataset.
+At this stage of our approach, the model is trained on the raw datasets, and these results are not yet post-stratified.<!-- We have more to say about this in Section \ref{discussion} but ours is first and foremost a forecasting rather than explanatory model, nonetheless there is value in examining the results for reasonableness.--> The estimates are in relation to how likely a respondent is to support the Australian Labor Party. In the case of both datasets, males are expected to be less likely to support the Australian Labor Party. Monotonically, respondents in older age-groups are more likely to support the Australian Labor Party in the Smartvote Australia dataset, but there is no monotonic trend in the Life in Australia dataset.
 
 Our datasets were unrepresentative in various ways. The next step in our approach is to use our trained model with a dataset that is more representative of the voting population.
 
@@ -570,7 +578,7 @@ knitr::include_graphics(here::here("outputs/figures/estimates/raw_data_compared_
 ```
 
 
-One important aspect of post-stratification is to understand how the raw survey results are being changed. We consider this on the basis of electoral division in Figure \ref{fig:rawdatacomparedwithmodelestimates}. The estimate of the first preference share for each electoral division is made by making many forecasts of the outcome, and then examining this distribution. Figure \ref{fig:rawdatacomparedwithmodelestimates}, which follows @Alexander2019, shows the mean of the distribution and 95 per cent prediction intervals (as a reminder, prediction intervals tend to be wider than confidence intervals). These can be compared with the raw data from the survey. In general, it can be seen that the raw estimate of the Australian Labor Party's share of first preferences in both surveys is being reduced by the model. Figure \ref{fig:rawdatacomparedwithmodelestimates} is on the basis of electoral divisions, however it is also possible to do a similar exercise on the basis of, say, age-group, gender, or education.
+One important aspect of post-stratification is to understand how the raw survey results are changed. We consider this on the basis of electoral division in Figure \ref{fig:rawdatacomparedwithmodelestimates}. The estimate of the first preference share for each electoral division is made by making many forecasts of the outcome, and then examining this distribution. Figure \ref{fig:rawdatacomparedwithmodelestimates}, which follows @Alexander2019, shows the mean of the distribution and 95 per cent prediction intervals (as a reminder, prediction intervals tend to be wider than confidence intervals). In general, the raw estimate of the Australian Labor Party's share of first preferences in both surveys is reduced by the model. Figure \ref{fig:rawdatacomparedwithmodelestimates} is on the basis of electoral divisions, however it is also possible to do a similar exercise on the basis of, say, age-group, gender, or education.
 
 
 ## Adding preferences
@@ -591,7 +599,8 @@ If the central estimate from our model aligned with the actual outcome then the 
 
 Probabilistic forecasts are notoriously difficult to interpret (for instance, see @morss2010examining, @morss2008communicating, @patt2003using, or @mislavsky2019combining). However, in Australia there is a commonly used framework for describing how 'safe' an electoral division is. One way to better communicate our results is to translate our central estimates into this framework. Table \ref{tab:bothoutcomesbyclass} classifies the two-party-preferred share for both our model estimates and the actual outcomes into commonly used descriptive tranches.
 
-The classifications used by the Australian Electoral Commission are usually used only on actual results, and so we adjust the central classification in a way that is more explicit about uncertainty. Specifically: 'safe loss' means a two-party-preferred share of less than 0.4; 'fairly safe loss' means between 0.4 and 0.44; 'marginal loss' means between 0.44 and 0.47; 'too close to call' means between 0.47 and 0.53; 'marginal win' means between 0.53 and 0.56; 'fairly safe win' means between 0.56 and 0.6; and finally, 'safe win' means a two-party-preferred share greater than 0.6. Table \ref{tab:haveagoyougetago} shows this disaggregation.
+The classifications used by the Australian Electoral Commission are usually used only on actual results, and so we adjust the central classification in a way that is more explicit about uncertainty. Specifically: 'safe loss' means a two-party-preferred share of less than 0.4; 'fairly safe loss' means between 0.4 and 0.44; 'marginal loss' means between 0.44 and 0.47; 'too close to call' means between 0.47 and 0.53; 'marginal win' means between 0.53 and 0.56; 'fairly safe win' means between 0.56 and 0.6; and finally, 'safe win' means a two-party-preferred share greater than 0.6. Table \ref{tab:haveagoyougetago} shows this disaggregation. Using this classification,  estimates based on the Life in Australia dataset tend to be more accurate than those based on the Smartvote Australia dataset. 
+
 
 
 
@@ -654,7 +663,6 @@ kable(both,
 
 
 
-Using this classification, it can be seen that estimates based on the Life in Australia dataset tend to be more accurate than those based on the Smartvote Australia dataset. 
 
 
 
@@ -676,7 +684,7 @@ Our model is able to provide forecasts that are directly related to the actual o
 
 
 
-In our model we account for preferences in a way that propagates uncertainty by applying a model that relates first-preferences shares to two-party-preferred shares which has been trained on the past four elections. This results in increased variance, compared with a deterministic approach. 
+In our model, we account for preferences in a way that propagates uncertainty by applying a model that relates first-preferences shares to two-party-preferred shares which has been trained on the past four elections. This results in increased variance, compared with a deterministic approach. 
 
 
 The datasets that we use required a large amount of preparation, cleaning, and wrangling before they were in a state that we were able to use them. Nonetheless, we have made all of them publicly available. The quantitative nature of our approach means that it is transparent and reproducible because bias adjustments, of the sort that may be usually done under the table, is an inherent part of our approach. 
@@ -724,6 +732,7 @@ One interesting aspect of our approach is the consideration of preferences. Pref
 
 
 
+<!-- Possibly no need to include this for job app
 
 ## Limitations
 There are a variety of limitations in our approach. Here we consider them in terms of data limitations, methodological weaknesses, and communication failings.  
@@ -737,7 +746,7 @@ From a methodological perspective, our model is anchored to past results. Given 
 
 Our model is set-up on the assumption that the parliament is dominated by two larger parties. If coalition-formation were an important aspect to the multi-district election being forecast, then there would be value in adding an additional layer to the model, along the lines of @stoetzer2019estimating.
 
-Finally, in terms of communication, we have provided some variations designed to ensure that the probability nature of our model cannot be separated from central estimates. However, this is just a first step and there is much more that could be done, including survey work and field testing to examine how this could be done in a better way.
+Finally, in terms of communication, we have provided some variations designed to ensure that the probability nature of our model cannot be separated from central estimates. However, this is just a first step and there is much more that could be done, including survey work and field testing to examine how this could be done in a better way. -->
 
 
 
@@ -745,7 +754,7 @@ Finally, in terms of communication, we have provided some variations designed to
 
 While for the purposes of this paper we wanted a parsimonious model, adding several complicating factors would be beneficial. Firstly, there is room to add another two or three co-variates in the individual-level model, especially if these co-variates were able to speak to the sample's bias. For instance, place of birth---specifically distinguishing between whether a person was born in Australia---is suggested by @leigh2005economic, and religion is suggested by @jackman2019small. The constraint here is that the covariant needs to be available to be computed as a nested sub-group and so needs to be present in the census or another post-stratification dataset. Secondly, adding another layer, say, to inform the model of the public results from traditional political opinion polling would be beneficial. In Germany and New Zealand settings @stoetzer2019forecasting sketch a potentially fruitful path forward in this regard. And finally, adding electoral-division- and state-specific complications would be beneficial in terms of better using related information that is available, and the electoral-division-specific political opinion polling that can be produced. In a UK setting @hanretty2016combining show one way in which this could be accomplished. As an example of this, while the level of aggregation that we use in this paper is that which is commonly used for national-level political opinion polling, it could be improved by accounting for state-specific parties. For instance, while it is appropriate to group the Jacki Lambie Party or Katter's Australia Party, with 'Other' at a national level, they attract considerable support in Tasmania and Queensland, respectively. 
 
-One weakness of our approach is that it is not electoral-division-specific, which means that there are nuances of specific electoral divisions that it misses. Better preferences model - take account of preferences deals, and also not lump all non-major parties in as other - separate them based on ideology so that there is at least some better flow.
+<!--One weakness of our approach is that it is not electoral-division-specific, which means that there are nuances of specific electoral divisions that it misses. Better preferences model - take account of preferences deals, and also not lump all non-major parties in as other - separate them based on ideology so that there is at least some better flow.-->
 
 <!-- While the level of aggregation is commonly used for national-level polls, it is inappropriate for our approach, which provides seat-specific estimates, and so needs to take into consideration state-specific parties. For instance, while it is appropriate to group the Jacki Lambie Party or Katter's Australia Party, with 'Other' at a national level, they attract considerable support in Tasmania and Queensland, respectively. As such, Table \ref{tab:LINAsummarystatsdetailed} shows the break-down at this more disaggregated level, bearing in mind that certain parties are only relevant to certain geographic areas for model consideration purposes. For instance, support for the Jacki Lambie Party would be recoded as Other in any state apart from Tasmania. -->
 
