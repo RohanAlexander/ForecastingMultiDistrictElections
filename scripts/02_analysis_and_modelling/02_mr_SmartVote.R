@@ -22,7 +22,7 @@ number_of_cores <- parallel::detectCores() # Used to parallelise brms
 
 SmartVote_regression_data <- read_csv("outputs/data/regression_data/SmartVote.csv")
 poststratification_data <- read_csv("outputs/data/poststratification_data/census_data.csv")
-preferences_data <- readr::read_csv("outputs/data/data_from_earlier_elections_on_2019_div_basis.csv")
+preferences_data <- readr::read_csv("outputs/data/elections/data_from_earlier_elections_on_2019_div_basis.csv")
 results_2019_TPP <- read_csv("inputs/data/election_2019/HouseTppByDivisionDownload-24310.csv",
                         skip = 1)
 results_2019_first_prefs <- read_csv("inputs/data/election_2019/HouseFirstPrefsByCandidateByVoteTypeDownload-24310.csv",
