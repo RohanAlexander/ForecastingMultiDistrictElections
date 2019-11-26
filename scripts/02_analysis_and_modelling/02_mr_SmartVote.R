@@ -29,15 +29,52 @@ results_2019_first_prefs <- read_csv("inputs/data/election_2019/HouseFirstPrefsB
                              skip = 1)
 
 
+# 
+preferences_data <- 
+  preferences_data %>% 
+  filter(year == 2016) %>% 
+  select(division, first_prefs_percent)
+
+SmartVote_regression_data <- 
+  SmartVote_regression_data %>% 
+  left_join(preferences_data, by = "division")
+
+
 #### Individual-level model ####
 # Model
 priors_simple <- set_prior("normal(0,1)", class = "b") + set_prior("normal(0,3)", class="Intercept")
+
 SmartVote_model <- brm(ALP_supporter ~ gender + age_group + education + (1|division), 
                    data = SmartVote_regression_data, 
                    family = bernoulli(),
                    prior = priors_simple,
                    cores = number_of_cores,
-                   file = "outputs/models/SmartVote")
+                   file = "outputs/models/SmartVote"
+                   )
+
+
+
+brms::get_prior(ALP_supporter ~ gender + age_group + education + (1 + first_prefs_percent|division),
+                data = SmartVote_regression_data)
+
+priors_simple <- set_prior("normal(0,1)", class = "b") + 
+  set_prior("normal(0,3)", class="Intercept") +
+  set_prior("student_t(3, 0, 10)", class="sd")
+
+
+SmartVote_model <- brm(
+  ALP_supporter ~ gender + age_group + education + (1 + first_prefs_percent|division),
+  data = SmartVote_regression_data, 
+  family = bernoulli(),
+  prior = priors_simple,
+  cores = number_of_cores,
+  # control = list(adapt_delta = 0.999),
+  file = "outputs/models/SmartVote_divs" # If running this again, either
+  # need to change this file name to something new or delete
+  # the saved model from the folder.
+)
+
+
 
 # SmartVote_model_state <- brm(ALP_supporter ~ gender + age_group + (state / division), 
 #                        data = SmartVote_regression_data, 

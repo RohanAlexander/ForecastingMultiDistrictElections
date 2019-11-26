@@ -24,12 +24,20 @@ results_2019_TPP <- read_csv("inputs/data/election_2019/HouseTppByDivisionDownlo
 results_2019_first_prefs <- read_csv("inputs/data/election_2019/HouseFirstPrefsByCandidateByVoteTypeDownload-24310.csv",
                                      skip = 1)
 
-LINA_regression_data %>% 
-  group_by(state) %>% 
-  summarise(n_distinct(division))
+# 
+preferences_data <- 
+  preferences_data %>% 
+  filter(year == 2016) %>% 
+  select(division, first_prefs_percent)
+
+LINA_regression_data <- 
+  LINA_regression_data %>% 
+  left_join(preferences_data, by = "division")
+
 
 
 #### Individual-level model ####
+
 LinA_model <- brm(ALP_supporter ~ gender + age_group + education + (1|division), 
                    data = LINA_regression_data, 
                    family = bernoulli(),
@@ -39,12 +47,26 @@ LinA_model <- brm(ALP_supporter ~ gender + age_group + education + (1|division),
                   # the saved model from the folder.
                   )
 
-LinA_model_multi <- brm(first_pref ~ gender + age_group + education + (1|division), 
-                        data = LINA_regression_data, 
-                        family = categorical(),
-                        cores = number_of_cores,
-                        file = "outputs/models/LinA_multi" 
-                  )
+brms::get_prior(ALP_supporter ~ gender + age_group + education + (1 + first_prefs_percent|division),
+                data = LINA_regression_data)
+
+priors_simple <- set_prior("normal(0,1)", class = "b") + 
+  set_prior("normal(0,3)", class="Intercept") +
+  set_prior("student_t(3, 0, 10)", class="sd")
+
+
+LinA_model <- brm(
+  ALP_supporter ~ gender + age_group + education + (1 + first_prefs_percent|division),
+  data = LINA_regression_data, 
+  family = bernoulli(),
+  prior = priors_simple,
+  cores = number_of_cores,
+  control = list(adapt_delta = 0.999),
+  file = "outputs/models/LinA_divs" # If running this again, either
+  # need to change this file name to something new or delete
+  # the saved model from the folder.
+)
+
 
 pairs(LinA_model)
 ranef(LinA_model)
