@@ -1,0 +1,461 @@
+\begin{thebibliography}{}
+
+\bibitem[ABS, 2016]{ABSTableBuilder2016}
+ABS (2016).
+\newblock {\em TableBuilder}.
+\newblock Australian Bureau of Statistics, Canberra, Australia.
+\newblock As accessed 10 March 2019.
+
+\bibitem[ABS, 2018a]{absdemographics}
+ABS (2018a).
+\newblock {\em {Australian Demographic Statistics}}.
+\newblock Australian Bureau of Statistics, Canberra, Australia.
+\newblock Cat No.\ 3101.0, Table 59, Estimated Resident Population By Single
+  Year Of Age, Australia, released 20/12/2018, as accessed on 21 September
+  2019.
+
+\bibitem[ABS, 2018b]{ABSCEDCorrespondences2018}
+ABS (2018b).
+\newblock {\em {Australian Statistical Geography Standard (ASGS): Volume 3 -
+  Non ABS Structures, July 2018, 'Correspondence CED 2017 to CED 2018'}}.
+\newblock Australian Bureau of Statistics, Canberra, Australia.
+\newblock Cat No.\ 1270.0.55.003, released 28/08/2018, as accessed on 21
+  September 2019.
+
+\bibitem[Alexander, 2019a]{Alexander2019}
+Alexander, M. (2019a).
+\newblock {\em Analyzing Name Changes After Marriage Using A Non-Representative
+  Survey}.
+\newblock Available at: https://www.monicaalexander.com/posts/2019-08-07-mrp/,
+  as accessed 30 September 2019.
+
+\bibitem[Alexander, 2019b]{alexanderRostock}
+Alexander, M. (2019b).
+\newblock {Reproducibility in Demographic Research}.
+\newblock Keynote address at the Open Science Workshop, Max Planck Institute
+  for Demographic Research, Rostock, Germany, October 10.
+
+\bibitem[Alexander and Alexander, 2016]{PetitPoll2016}
+Alexander, M. and Alexander, R. (2016).
+\newblock {\em {Small Scale Australian Political Polling}}.
+\newblock Petit Poll.
+
+\bibitem[Alexander, 2019c]{AustralianElections}
+Alexander, R. (2019c).
+\newblock {\em AustralianElections: Datasets on Australian Elections}.
+\newblock Findings based on use of version 0.08, as accessed 19 September 2019.
+
+\bibitem[Alkema and New, 2015]{newjrshinyapp}
+Alkema, L. and New, J.~R. (2015).
+\newblock {Family Planning Estimation Tool (FPET)}.
+\newblock Available at http://fpet.track20.org/.
+
+\bibitem[Bivand et~al., 2019]{rgdalreference}
+Bivand, R., Keitt, T., and Rowlingson, B. (2019).
+\newblock {\em {rgdal: Bindings for the 'Geospatial' Data Abstraction
+  Library}}.
+\newblock R package version 1.4-4.
+
+\bibitem[Bivand et~al., 2013]{spreferencetwo}
+Bivand, R.~S., Pebesma, E., and Gomez-Rubio, V. (2013).
+\newblock {\em {Applied spatial data analysis with {R}, Second edition}}.
+\newblock Springer, NY.
+
+\bibitem[B\"{u}rkner, 2017]{brmspackage}
+B\"{u}rkner, P.-C. (2017).
+\newblock {brms}: An {R} package for {Bayesian} multilevel models using {Stan}.
+\newblock {\em Journal of Statistical Software}, 80(1):1--28.
+
+\bibitem[Buttice and Highton, 2013]{ButticeHighton2013}
+Buttice, M.~K. and Highton, B. (2013).
+\newblock {How Does Multilevel Regression and Poststratification Perform with
+  Conventional National Surveys?}
+\newblock {\em Political Analysis}, 21(4):449--467.
+
+\bibitem[Carpenter et~al., 2017]{StanCitation2017}
+Carpenter, B., Gelman, A., Hoffman, M.~D., Lee, D., Goodrich, B., Betancourt,
+  M., Brubaker, M., Guo, J., Li, P., and Riddell, A. (2017).
+\newblock {Stan: A probabilistic programming language}.
+\newblock {\em Journal of Statistical Software}, 76(1).
+
+\bibitem[Cohn, 2016]{Cohn2016}
+Cohn, N. (2016).
+\newblock {We Gave Four Good Pollsters the Same Raw Data They Had Four
+  Different Results}.
+\newblock {\em New York Times}.
+\newblock TESTSTSEST.
+
+\bibitem[Cook et~al., 2019]{eechidnacite}
+Cook, D., Ebert, A., Forbes, J., Hofmann, H., Hyndman, R., Lumley, T., Marwick,
+  B., Sievert, C., Sun, M., Talagala, D., Tierney, N., Tomasetti, N., Wang, E.,
+  and Zhou, F. (2019).
+\newblock {\em eechidna: Exploring Election and Census Highly Informative Data
+  Nationally for Australia}.
+\newblock R package version 1.4.0.
+
+\bibitem[Dassonneville et~al., 2019]{dassonneville2019compulsory}
+Dassonneville, R., Feitosa, F., Hooghe, M., Lau, R.~R., and Stiers, D. (2019).
+\newblock {Compulsory Voting Rules, Reluctant Voters and Ideological Proximity
+  Voting}.
+\newblock {\em Political Behavior}, 41(1):209--230.
+
+\bibitem[Dove, 2019]{LINA2019}
+Dove, C. (2019).
+\newblock {\em {Life in Australia - Wave 26, Technical Report, May 2019}}.
+\newblock The Social Research Centre, Melbourne, Australia.
+\newblock Version: 1.0 - May 2019.
+
+\bibitem[Dowding and Miller, 2019]{dowding2019prediction}
+Dowding, K. and Miller, C. (2019).
+\newblock {On prediction in political science}.
+\newblock {\em European Journal of Political Research}, 58(3):1001--1018.
+
+\bibitem[Dumont, 2019]{smartvote}
+Dumont, P. (2019).
+\newblock {\em {Methodology for the Voting Advice and Matching}}.
+\newblock Available at:
+  https://australia.smartvote.org/assets/pdf/Positional\_matching\_methodology.pdf.
+
+\bibitem[Forbes et~al., 2019]{forbes2019spatial}
+Forbes, J., Cook, D., and Hyndman, R.~J. (2019).
+\newblock {Spatial modelling of the two-party preferred vote in Australian
+  federal elections}.
+
+\bibitem[Fowler, 2013]{fowler2013electoral}
+Fowler, A. (2013).
+\newblock {Electoral and policy consequences of voter turnout: Evidence from
+  compulsory voting in Australia}.
+\newblock {\em Quarterly Journal of Political Science}, 8(2):159--182.
+
+\bibitem[Gelman and Little, 1997]{GelmanLittle1997}
+Gelman, A. and Little, T.~C. (1997).
+\newblock {Poststratification into Many Categories Using Hierarchical Logistic
+  Regression}.
+\newblock {\em Survey Methodology}, 23(2):127--135.
+
+\bibitem[Germann and Gemenis, 2019]{GermannGemenis2019}
+Germann, M. and Gemenis, K. (2019).
+\newblock {Getting Out the Vote With Voting Advice Applications}.
+\newblock {\em Political Communication}, 36(1):149--170.
+
+\bibitem[Goel et~al., 2015]{goel2015non}
+Goel, S., Obeng, A., and Rothschild, D. (2015).
+\newblock {\em {Non-representative surveys: Fast, cheap, and mostly accurate}}.
+\newblock Working Paper, as accessed 2 October 2019, available at
+  \url{http://researchdmr.com/FastCheapAccurate.pdf}.
+
+\bibitem[Greenland et~al., 2016]{greenland2016statistical}
+Greenland, S., Senn, S.~J., Rothman, K.~J., Carlin, J.~B., Poole, C., Goodman,
+  S.~N., and Altman, D.~G. (2016).
+\newblock {Statistical tests, P values, confidence intervals, and power: A
+  guide to misinterpretations}.
+\newblock {\em European Journal of Epidemiology}, 31(4):337--350.
+
+\bibitem[Handmer and Proudley, 2007]{handmer2007communicating}
+Handmer, J. and Proudley, B. (2007).
+\newblock Communicating uncertainty via probabilities: The case of weather
+  forecasts.
+\newblock {\em Environmental Hazards}, 7(2):79--87.
+
+\bibitem[Hannan-Morrow and Roden, 2014]{hannan2014gender}
+Hannan-Morrow, S. and Roden, M. (2014).
+\newblock {Gender, Age and Generational Effects on Turnout in Australian
+  Federal Elections}.
+\newblock In {\em The Australian Political Studies Association Annual
+  Conference, University of Sydney}.
+
+\bibitem[Hanretty, 2019]{hanretty2019introduction}
+Hanretty, C. (2019).
+\newblock An introduction to multilevel regression and post-stratification for
+  estimating constituency opinion.
+\newblock {\em Political Studies Review}, pages 1--16.
+
+\bibitem[Hanretty et~al., 2016]{hanretty2016combining}
+Hanretty, C., Lauderdale, B., and Vivyan, N. (2016).
+\newblock {Combining national and constituency polling for forecasting}.
+\newblock {\em Electoral Studies}, 41:239--243.
+
+\bibitem[Hoekstra et~al., 2018]{hoekstra2018improving}
+Hoekstra, R., Morey, R.~D., and Wagenmakers, E.-J. (2018).
+\newblock {Improving the interpretation of confidence and credible intervals}.
+\newblock In Sorto, M.~A., White, A., and Guyo, L., editors, {\em Looking back,
+  looking forward. Proceedings of the Tenth International Conference on
+  Teaching Statistics}.
+
+\bibitem[i~Coma and Lago, 2018]{ComaLago2018}
+i~Coma, F.~M. and Lago, I. (2018).
+\newblock Gerrymandering in comparative perspective.
+\newblock {\em Party Politics}, 24(2):99--104.
+
+\bibitem[Jackman, 1999]{jackman1999non}
+Jackman, S. (1999).
+\newblock {Non-compulsory voting in Australia?: What surveys can (and can't)
+  tell us}.
+\newblock {\em Electoral Studies}, 18(1):29--48.
+
+\bibitem[Jackman, 2005]{jackman2005}
+Jackman, S. (2005).
+\newblock {Pooling the polls over an election campaign}.
+\newblock {\em Australian Journal of Political Science}, 40(4):499--517.
+
+\bibitem[Jackman et~al., 2019]{jackman2019small}
+Jackman, S., Ratcliff, S., and Mansillo, L. (2019).
+\newblock {\em {Small area estimates of public opinion: Model-assisted
+  post-stratification of data from voter advice applications}}.
+\newblock Working paper presented at 2019 Annual Asian Political Methodology
+  Meeting, available at:
+  \url{https://www.cambridge.org/core/membership/services/aop-file-manager/file/5c2f6ebb7cf9ee1118d11c0a/APMM-2019-Simon-Jackman.pdf}.
+
+\bibitem[Jamieson et~al., 2019]{jamieson2019signaling}
+Jamieson, K.~H., McNutt, M., Kiermer, V., and Sever, R. (2019).
+\newblock Signaling the trustworthiness of science.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  116(39):19231--19236.
+
+\bibitem[Kahle and Wickham, 2013]{ggmapreference}
+Kahle, D. and Wickham, H. (2013).
+\newblock {ggmap: Spatial Visualization with ggplot2}.
+\newblock {\em The R Journal}, 5(1):144--161.
+
+\bibitem[Kastellec et~al., 2016]{KastellecLaxPhillips2016}
+Kastellec, J.~P., Lax, J.~R., and Phillips, J. (2016).
+\newblock {Estimating State Public Opinion With Multi-Level Regression and
+  Poststratification using R}.
+\newblock {\em Working Paper}.
+
+\bibitem[Kay, 2019]{tidybayesreference}
+Kay, M. (2019).
+\newblock {\em {{tidybayes}: Tidy Data and Geoms for {Bayesian} Models}}.
+\newblock R package version 1.1.0.
+
+\bibitem[Kleinnijenhuis et~al., 2019]{Kleinnijenhuis2019}
+Kleinnijenhuis, J., van~de Pol, J., van Hoof, A.~M., and Krouwel, A.~P. (2019).
+\newblock {Genuine effects of vote advice applications on party choice:
+  Filtering out factors that affect both the advice obtained and the vote}.
+\newblock {\em Party Politics}, 25(3):291--302.
+
+\bibitem[Konitzer and Rothschild, 2016]{konitzerpolitical}
+Konitzer, T.~B. and Rothschild, D.~M. (2016).
+\newblock {Why Political Polling is not Dead -- A Plea for Non-Probability
+  Polling, Algorithms, and Big Data}.
+\newblock Working paper, as accessed 2 October 2019, available at:
+  \url{https://journalism.stanford.edu/cj2016/files/Why%20Political%20Polling%20is%20not%20Dead.pdf}.
+
+\bibitem[Larsen and Fazekas, 2019]{larsen2019transforming}
+Larsen, E.~G. and Fazekas, Z. (2019).
+\newblock {Transforming Stability into Change: How the Media Select and Report
+  Opinion Polls}.
+\newblock {\em The International Journal of Press/Politics}.
+
+\bibitem[Lauderdale et~al., 2017]{lauderdale2017model}
+Lauderdale, B.~E., Bailey, D., Blumenau, Y., and Rivers, D. (2017).
+\newblock {Model-Based Pre-Election Polling for National and Sub-National
+  Outcomes in the US and UK}.
+\newblock Working paper, as accessed 5 December 2018, available at:
+  \url{http://benjaminlauderdale.net/files/papers/mrp-polling-paper.pdf}.
+
+\bibitem[Leigh, 2005]{leigh2005economic}
+Leigh, A. (2005).
+\newblock {Economic Voting and Electoral Behavior: How Do Individual, Local,
+  and National Factors Affect the Partisan Choice?}
+\newblock {\em Economics \& Politics}, 17(2):265--296.
+
+\bibitem[Mackerras and McAllister, 1999]{mackerras1999compulsory}
+Mackerras, M. and McAllister, I. (1999).
+\newblock {Compulsory voting, party stability and electoral advantage in
+  Australia}.
+\newblock {\em Electoral Studies}, 18(2):217--233.
+
+\bibitem[McNair and Teer, 1983]{McNair1983}
+McNair, I. and Teer, F. (1983).
+\newblock {Political Opinion Polling in Australia}.
+\newblock In Worcester, R., editor, {\em {Political Opinion Polling: An
+  International Review}}, pages 4--17. The Macmillan Press.
+
+\bibitem[Mills and Tiffen, 2012]{mills2012opinion}
+Mills, S. and Tiffen, R. (2012).
+\newblock {Opinion Polls and the Media in Australia}.
+\newblock In {\em Opinion Polls and the Media}, pages 155--174. Springer.
+
+\bibitem[Mislavsky and Gaertig, 2019]{mislavsky2019combining}
+Mislavsky, R. and Gaertig, C. (2019).
+\newblock Combining probability forecasts: 60\% and 60\% is 60\%, but likely
+  and likely is very likely.
+\newblock As accessed 9 October 2019, available at SSRN:
+  \url{https://ssrn.com/abstract=3454796}.
+
+\bibitem[Morss et~al., 2008]{morss2008communicating}
+Morss, R.~E., Demuth, J.~L., and Lazo, J.~K. (2008).
+\newblock {Communicating uncertainty in weather forecasts: A survey of the US
+  public}.
+\newblock {\em Weather and forecasting}, 23(5):974--991.
+
+\bibitem[Morss et~al., 2010]{morss2010examining}
+Morss, R.~E., Lazo, J.~K., and Demuth, J.~L. (2010).
+\newblock {Examining the use of weather forecasts in decision scenarios:
+  Results from a US survey with implications for uncertainty communication}.
+\newblock {\em Meteorological Applications}, 17(2):149--162.
+
+\bibitem[Munaf{\`o} et~al., 2017]{munafo2017manifesto}
+Munaf{\`o}, M.~R., Nosek, B.~A., Bishop, D.~V., Button, K.~S., Chambers, C.~D.,
+  Du~Sert, N.~P., Simonsohn, U., Wagenmakers, E.-J., Ware, J.~J., and
+  Ioannidis, J.~P. (2017).
+\newblock A manifesto for reproducible science.
+\newblock {\em Nature human behaviour}, 1(1):1--9.
+
+\bibitem[Munzert, 2017]{munzert2017forecasting}
+Munzert, S. (2017).
+\newblock {Forecasting elections at the constituency level: A
+  correction--combination procedure}.
+\newblock {\em International journal of forecasting}, 33(2):467--481.
+
+\bibitem[Oleskog~Tryggvason and Str{\"o}mb{\"a}ck, 2018]{oleskog2018fact}
+Oleskog~Tryggvason, P. and Str{\"o}mb{\"a}ck, J. (2018).
+\newblock {Fact or Fiction? Investigating the quality of opinion poll coverage
+  and its antecedents}.
+\newblock {\em Journalism Studies}, 19(14):2148--2167.
+
+\bibitem[Patt and Schrag, 2003]{patt2003using}
+Patt, A.~G. and Schrag, D.~P. (2003).
+\newblock {Using specific language to describe risk and probability}.
+\newblock {\em Climatic Change}, 61(1-2):17--30.
+
+\bibitem[Pebesma and Bivand, 2005]{spreferenceone}
+Pebesma, E.~J. and Bivand, R.~S. (2005).
+\newblock Classes and methods for spatial data in {R}.
+\newblock {\em R News}, 5(2):9--13.
+
+\bibitem[Pereira, 2019]{pereira2019parties}
+Pereira, M.~M. (2019).
+\newblock {Do parties respond strategically to opinion polls? Evidence from
+  campaign statements}.
+\newblock {\em Electoral Studies}, 59:78--86.
+
+\bibitem[Popp et~al., 2016]{Popp2016}
+Popp, R., Horvath, L., Banducci, S., Coan, T., and Krouwel, A. (2016).
+\newblock {\em {What Voting Advice Applications can teach us about Voters and
+  Elections}}.
+\newblock Paper presented at the 2016 ECPR General Conference in Prague.
+
+\bibitem[{R Core Team}, 2019a]{foreignreference}
+{R Core Team} (2019a).
+\newblock {\em {foreign: Read Data Stored by 'Minitab', 'S', 'SAS', 'SPSS',
+  'Stata', 'Systat', 'Weka', 'dBase', ...}}
+\newblock R package version 0.8-72.
+
+\bibitem[{R Core Team}, 2019b]{RCitation2018}
+{R Core Team} (2019b).
+\newblock {\em {R: A Language and Environment for Statistical Computing}}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria.
+
+\bibitem[Raftery et~al., 2014]{raftery2014bayesian}
+Raftery, A.~E., Alkema, L., and Gerland, P. (2014).
+\newblock {Bayesian population projections for the United Nations}.
+\newblock {\em {Statistical science: A review journal of the Institute of
+  Mathematical Statistics}}, 29(1):58.
+
+\bibitem[Reavy and Pavlick, 2018]{reavy2018emphasis}
+Reavy, M.~M. and Pavlick, K. (2018).
+\newblock The de-emphasis of sampling error in coverage of presidential
+  approval ratings.
+\newblock {\em Newspaper Research Journal}, 39(2):180--190.
+
+\bibitem[Reilly, 2001]{reilly2001preferential}
+Reilly, B. (2001).
+\newblock {Preferential voting and its political consequences}.
+\newblock In {\em {Elections: Full, free and fair}}, pages 78--95. Federation
+  Press Sydney.
+
+\bibitem[Ricketson et~al., 2019]{ricketson2019like}
+Ricketson, M., Dodd, A., Zion, L., and Winarnita, M. (2019).
+\newblock {"Like Being Shot in the Face" or "I'm Glad I'm Out": Journalists'
+  Experiences of Job Loss in the Australian Media Industry 2012--2014}.
+\newblock {\em Journalism Studies}, pages 1--18.
+
+\bibitem[Robinson and Hayes, 2019]{broomreference}
+Robinson, D. and Hayes, A. (2019).
+\newblock {\em {broom: Convert Statistical Analysis Objects into Tidy
+  Tibbles}}.
+\newblock R package version 0.5.2.
+
+\bibitem[Rothschild, 2015]{rothschild2015combining}
+Rothschild, D. (2015).
+\newblock {Combining forecasts for elections: Accurate, relevant, and timely}.
+\newblock {\em International Journal of Forecasting}, 31(3):952--964.
+
+\bibitem[Sheppard and Beauregard, 2018]{sheppard2018early}
+Sheppard, J. and Beauregard, K. (2018).
+\newblock {Early voting in Australia: The costs and benefits of convenience}.
+\newblock {\em Political Science}, 70(2):117--134.
+
+\bibitem[Sheppard et~al., 2019]{sheppard2019explaining}
+Sheppard, J., Taflaga, M., and Jiang, L. (2019).
+\newblock {Explaining high rates of political participation among Chinese
+  migrants to Australia}.
+\newblock {\em International Political Science Review}.
+
+\bibitem[Stoetzer et~al., 2019]{stoetzer2019forecasting}
+Stoetzer, L.~F., Neunhoeffer, M., Gschwend, T., Munzert, S., and Sternberg, S.
+  (2019).
+\newblock {Forecasting Elections in Multiparty Systems: A Bayesian Approach
+  Combining Polls and Fundamentals}.
+\newblock {\em Political Analysis}, 27(2):255--262.
+
+\bibitem[Stoetzer and Orlowski, 2019]{stoetzer2019estimating}
+Stoetzer, L.~F. and Orlowski, M. (2019).
+\newblock Estimating coalition majorities during political campaigns based on
+  pre-election polls.
+\newblock {\em Journal of Elections, Public Opinion and Parties}, pages 1--12.
+
+\bibitem[Toff, 2019]{toff2019nate}
+Toff, B. (2019).
+\newblock {The 'Nate Silver effect' on political journalism: Gatecrashers,
+  gatekeepers, and changing newsroom practices around coverage of public
+  opinion polls}.
+\newblock {\em Journalism}, 20(7):873--889.
+
+\bibitem[van~der Eijk et~al., 2006]{vandereijk2006}
+van~der Eijk, C., van~der Brug, W., Kroh, M., and Franklin, M. (2006).
+\newblock {Rethinking the dependent variable in voting behavior: On the
+  measurement and analysis of electoral utilities}.
+\newblock {\em Electoral Studies}, 25:424--447.
+
+\bibitem[van Elsas et~al., 2013]{vanElsas2013}
+van Elsas, E.~J., Lubbe, R., van~der Meer, T.~W., and van~der Brug, W. (2013).
+\newblock {Vote Recall: A Panel Study on the Mechanisms That Explain Vote
+  Recall Inconsistency}.
+\newblock {\em International Journal of Public Opinion Research}, 26(1):18--40.
+
+\bibitem[Vehtari et~al., 2019]{vehtari2019limitations}
+Vehtari, A., Simpson, D.~P., Yao, Y., and Gelman, A. (2019).
+\newblock {Limitations of "Limitations of Bayesian leave-one-out
+  cross-validation for model selection"}.
+\newblock {\em Computational Brain \& Behavior}, 2(1):22--27.
+
+\bibitem[Wang et~al., 2015]{WangRothschildGoelGelman2015}
+Wang, W., Rothschild, D., Goel, S., and Gelman, A. (2015).
+\newblock {Forecasting elections with non-representative polls}.
+\newblock {\em International Journal of Forecasting}, 31(3):980--991.
+
+\bibitem[Westwood et~al., 2019]{westwood2019projecting}
+Westwood, S., Messing, S., and Lelkes, Y. (2019).
+\newblock {Projecting confidence: How the probabilistic horse race confuses and
+  demobilizes the public}.
+\newblock {\em Available at: SSRN 3117054}.
+
+\bibitem[Wickham, 2017]{tidyversereference}
+Wickham, H. (2017).
+\newblock {\em {tidyverse: Easily Install and Load the 'Tidyverse'}}.
+\newblock R package version 1.2.1.
+
+\bibitem[Wickham and Miller, 2019]{havenreference}
+Wickham, H. and Miller, E. (2019).
+\newblock {\em {haven: Import and Export 'SPSS', 'Stata' and 'SAS' Files}}.
+\newblock R package version 2.1.1.
+
+\bibitem[Young, 2010]{young2010australia}
+Young, S. (2010).
+\newblock {\em {How Australia decides: Election reporting and the media}}.
+\newblock Cambridge University Press.
+
+\end{thebibliography}

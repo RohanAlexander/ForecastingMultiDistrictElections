@@ -23,9 +23,19 @@ results_2019_first_prefs <- read_csv("inputs/data/election_2019/HouseFirstPrefsB
                                      skip = 1)
 
 
+preferences_data_reduced <- 
+  preferences_data %>% 
+  filter(year == 2016) %>% 
+  select(division, first_prefs_percent)
+
+poststratification_data <- 
+  poststratification_data %>% 
+  left_join(preferences_data_reduced, by = "division")
+
+
 #### Post-stratify ####
-LinA_model <- readRDS("outputs/models/LinA.rds")
-SmartVote_model <- readRDS("outputs/models/SmartVote.rds")
+LinA_model <- readRDS("outputs/models/LinA_divs.rds")
+SmartVote_model <- readRDS("outputs/models/SmartVote_divs.rds")
 
 # First LinA
 # Based on https://www.monicaalexander.com/posts/2019-08-07-mrp/

@@ -5,7 +5,7 @@
 #### Contact ####
 # Author: Rohan Alexander
 # Contact: rohan.alexander@utoronto.ca
-# Last updated: 23 November 2010
+# Last updated: 27 November 2010
 
 
 #### Workspace setup ####
@@ -14,9 +14,8 @@ library(brms)
 library(lme4)
 library(tidybayes)
 library(tidyverse)
-library("rstan") # observe startup messages
+library("rstan")
 rstan_options(auto_write = TRUE)
-# install.packages("rstan")
 
 number_of_cores <- parallel::detectCores() # Used to parallelise brms
 
@@ -28,13 +27,11 @@ results_2019_TPP <- read_csv("inputs/data/election_2019/HouseTppByDivisionDownlo
 results_2019_first_prefs <- read_csv("inputs/data/election_2019/HouseFirstPrefsByCandidateByVoteTypeDownload-24310.csv",
                              skip = 1)
 
-
-# 
+# Add the 2016 first preferences results into the regression dataset
 preferences_data <- 
   preferences_data %>% 
   filter(year == 2016) %>% 
   select(division, first_prefs_percent)
-
 SmartVote_regression_data <- 
   SmartVote_regression_data %>% 
   left_join(preferences_data, by = "division")
@@ -48,8 +45,9 @@ SmartVote_model <- brm(ALP_supporter ~ gender + age_group + education + (1|divis
                    data = SmartVote_regression_data, 
                    family = bernoulli(),
                    prior = priors_simple,
-                   cores = number_of_cores,
-                   file = "outputs/models/SmartVote"
+                   cores = number_of_cores
+                   # ,
+                   # file = "outputs/models/SmartVote"
                    )
 
 
@@ -68,8 +66,48 @@ SmartVote_model <- brm(
   family = bernoulli(),
   prior = priors_simple,
   cores = number_of_cores,
-  # control = list(adapt_delta = 0.999),
+  control = list(adapt_delta = 0.99),
   file = "outputs/models/SmartVote_divs" # If running this again, either
+  # need to change this file name to something new or delete
+  # the saved model from the folder.
+)
+
+
+SmartVote_model <- brm(
+  ALP_supporter ~ gender + age_group + education + (1 + first_prefs_percent +state|division),
+  data = SmartVote_regression_data, 
+  family = bernoulli(),
+  prior = priors_simple,
+  cores = number_of_cores,
+  control = list(adapt_delta = 0.99),
+  file = "outputs/models/SmartVote_divs_state" # If running this again, either
+  # need to change this file name to something new or delete
+  # the saved model from the folder.
+)
+
+
+
+SmartVote_model <- brm(
+  ALP_supporter ~ gender + age_group + education + (1 + state|division),
+  data = SmartVote_regression_data, 
+  family = bernoulli(),
+  prior = priors_simple,
+  cores = number_of_cores,
+  control = list(adapt_delta = 0.99),
+  file = "outputs/models/SmartVote_divs_state" # If running this again, either
+  # need to change this file name to something new or delete
+  # the saved model from the folder.
+)
+
+
+SmartVote_model <- brm(
+  ALP_supporter ~ gender + age_group + education + (state|division),
+  data = SmartVote_regression_data, 
+  family = bernoulli(),
+  prior = priors_simple,
+  cores = number_of_cores,
+  control = list(adapt_delta = 0.99),
+  file = "outputs/models/SmartVote_divs_state_group" # If running this again, either
   # need to change this file name to something new or delete
   # the saved model from the folder.
 )

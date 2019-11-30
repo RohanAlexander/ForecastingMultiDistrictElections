@@ -8,7 +8,7 @@ output:
     latex_engine: pdflatex
     template: svm-latex-ms.tex
 title: "Forecasting Multi-District Elections"
-thanks: "We thank the Social Research Centre, and in particular Ben Phillips, for graciously providing data. Thank you to Monica Alexander, Lauren Kennedy, John McAndrews, Benjamin Stevens, Michael Donnelly, as well as seminar participants at the University of Toronto Political Behaviour Group and the 2019 POP AusPSA Standing Group Annual Workshop for their assistance and helpful suggestions. Our code and datasets are available at: https://github.com/RohanAlexander/ForecastingMultiDistrictElections. Comments on the `r format(Sys.time(), '%d %B %Y')` version of this paper are welcome at: rohan.alexander@utoronto.ca. For the latest version please click [here](https://github.com/RohanAlexander/ForecastingMultiDistrictElections/raw/master/outputs/paper/paper.pdf)."
+thanks: "We thank the Social Research Centre, and in particular Ben Phillips, for graciously providing data. Thank you to Monica Alexander and Lauren Kennedy for their assistance. Thank you to John McAndrews, Benjamin Stevens, Michael Donnelly, as well as seminar participants at the University of Toronto Political Behaviour Group and the 2019 POP AusPSA Standing Group Annual Workshop for their helpful comments and suggestions. Our code and datasets are available at: https://github.com/RohanAlexander/ForecastingMultiDistrictElections. Comments on the `r format(Sys.time(), '%d %B %Y')` version of this paper are welcome at: rohan.alexander@utoronto.ca. For the latest version please click [here](https://github.com/RohanAlexander/ForecastingMultiDistrictElections/raw/master/outputs/paper/paper.pdf)."
 author:
 - name: Rohan Alexander
   affiliation: University of Toronto
@@ -61,11 +61,13 @@ options(htmltools.dir.version = FALSE)
 ```
 
 
+**Please note that all estimates and models in this paper are *preliminary* and should not be circulated or cited.**
+
 # Introduction
 Political opinion polling is an integral aspect of modern politics. For instance, campaigns use it to inform strategic decisions [@pereira2019parties], and the media draw on it for content [@mills2012opinion; @toff2019nate]. But, not only are political opinion polls often just wrong, they are rarely transparent [@young2010australia, p. 188], and statistical uncertainty is commonly downplayed [@oleskog2018fact; @reavy2018emphasis]. Most fundamentally, in a multi-district system they are usually only somewhat related to the actual outcome of interest: the number of electoral divisions won by each party.
 
 
-In this paper we show that it is possible to use the individual-level responses already collected by political opinion polling firms, along with publicly available datasets and accessible quantitative methods to produce estimates of the number of electoral divisions won by each party. We first establish a framework for evaluating a forecasting model for multi-district elections. It consists of five aspects. These are that a model should: be interpretable and provide reasonable estimates of the number of electoral divisions that each party will win; account for preferences and/or turnout; operate in a reproducible and transparent way; produce results that account for the fact that it is a probability model; and, finally, not be worse than traditional approaches in terms of speed or cost. Within this framework, the method that we implement involves first estimating the first-preference share of each party in each electoral division based on survey data using multi-level regression with post-stratification. We then apply a model that we trained to estimate division-level two-party-preferred shares.
+In this paper we show that it is possible to use the individual-level responses already collected by political opinion polling firms, along with publicly available datasets and accessible quantitative methods to produce estimates of the number of electoral divisions won by each party. We first establish a framework for evaluating a forecasting model for multi-district elections. It consists of five aspects. These are that a model should: be interpretable and provide reasonable estimates of the number of electoral divisions that each party will win; account for features of the electoral system; operate in a reproducible and transparent way; produce results that account for the fact that it is a probability model; and, finally, not be worse than traditional approaches in terms of speed or cost. Within this framework, the method that we implement involves first estimating the first-preference share of each party in each electoral division based on survey data using multi-level regression with post-stratification. We then apply a model that we trained to estimate division-level two-party-preferred shares.
 <!-- Seat-specific anomalies can be accounted for by adding additional layers to the model, or by inputting detailed information about that seat. And the model, which is centered around multi-level regression with post-stratification goes some way to ensuring that a handful of odd results do not need to be manually adjusted or removed. -->
 
 Multi-level regression with post-stratification (MRP) [@GelmanLittle1997] is a popular way to analyse opinion by way of providing good-quality estimates of subsets of the population. It uses a regression model to consider individual-level survey responses as being determined by various sub-groups and then rebuilds the sample to better match the population. In this way MRP can not only allow a better understanding of opinion, but also allow us to analyse data that may otherwise be unusable and consider outcomes within the context of distributions and uncertainty. MRP has been used in a variety of settings and one of its advantages is that a survey analysed in this way can be biased to a larger extent than normal because the approach should go some way to account for this. For instance, in the US @WangRothschildGoelGelman2015 used data collected from the XBox platform, which tends to be both younger and more male than the US electorate, and were able to draw meaningful insights about the 2012 US Presidential Election.
@@ -106,7 +108,7 @@ If a model does not explicitly output electoral division counts by party then wi
 
 
 
-## Account for features of the electoral system
+## Account for electoral system features
 
 The second aspect of our framework for evaluating the reasonableness of a model for forecasting multi-district elections is that it accounts for preferences, or turnout, as appropriate, in a way that propagates uncertainty.
 
@@ -175,7 +177,7 @@ Typical political opinion polling data in Australia focuses on a respondent's fi
 
 Our preferred approach is to account for this using a trained regression model of the preference flows from first-preferences through to two-party-preferred, for each electoral division, from the past four federal elections: 2007, 2010, 2013, and 2016.[^moreyearsfootnote] For each electoral division and election, this model, detailed in the next section, relates the Australian Labor Party's two-party-preferred proportion to the Australian Labor Party's first-preferences proportion. We train this model on a dataset obtained from the Australian Electoral Commission (AEC).
 
-[^moreyearsfootnote]: Data on preferences are available since preferential voting was introduced in 1918, for instance via the AustralianElections R package [@AustralianElections] or the eechidna R package [@eechidnacite]. Nonetheless we train the model on four elections' worth of data. This is a balance between over-fitting by using too few elections, and ensuring the relevance of the preferences that we are training on. Additionally, because of the need to convert the results into the electoral divisions used in the 2019 Federal Election  every additional election that we train the preferences model on introduces more error.
+[^moreyearsfootnote]: Data on preferences are available since preferential voting was introduced in 1918, for instance using the AustralianElections R package [@AustralianElections] or, for more recent elections, the eechidna R package [@eechidnacite]. Nonetheless we train the model on four elections' worth of data. This is a balance between over-fitting by using too few elections, and ensuring the relevance of the preferences that we are training on. Additionally, because of the need to convert the results into the electoral divisions used in the 2019 Federal Election  every additional election that we train the preferences model on introduces more error.
 
 The main difficulty with training this model is that the boundaries of the electoral divisions can change between elections. This means that, for instance, as shown in Figure \ref{fig:map}, constructed using the ggmap package of @ggmapreference, the Division of Canberra as it was in the 2016 election is not geographically identical to the Division of Canberra as it was for the 2019 election. In order to account for this we obtain both first preferences and two-party-preferred historical counts on a voting-booth basis. Using the latitude and longitude of each booth, and maps of the electoral divisions as they were at the 2019 election, we assign each booth to the appropriate 2019 electoral division. This allows us to construct a geographically consistent dataset that we use to train this level of our model.
 <!-- [^noprepollfootnote] -->
@@ -474,7 +476,7 @@ The combination of the levels of the characteristics define the sub-groups that 
 We will now discuss each component of our model, starting with individual responses and building up toward electoral-division-level estimates of two-party-preferred.
 
 Equation \ref{eq:pollingequation} is at an individual-respondent level:
-<!-- [^betterinformthedivisionsfootnote][^nestbystatesyounumpyfootnote]  -->
+<!-- [^aessfootnote][^nestbystatesyounumpyfootnote][^alexfootnote] -->
 \begin{eqnarray} 
     \mbox{Pr}(\hat{\mbox{FP}}_{i, p=1}) = \mbox{logit}^{-1}\left(\delta_{0} + \delta_1\mbox{gender}_{i} + \delta_2\mbox{age}_{i} + \delta_3\mbox{education}_{i} + \delta_4\mbox{division}_{d[i]}\right)
   \label{eq:pollingequation} 
@@ -485,13 +487,16 @@ The division-effect is modelled as:
 \begin{eqnarray} 
     \delta_4\mbox{division}_{d[i]} = \alpha_{d[i]} + \beta_{d[i]}\mbox{previous division result}_{d[i]}
 \end{eqnarray} 
-That is, we consider each division has a degree of 'inertia', whereby support for the Australian Labor Party in the previous election helps determine what we expect support for the Australian Labor Party to be this election.
+That is, we consider each division has a degree of 'inertia', whereby support for the Australian Labor Party in the previous election helps determine what we expect support for the Australian Labor Party to be this election. One alternative here would be to consider an individual's past vote. However, in the absence of linked or panel data voter's recall of past vote has been found to be inaccurate, for instance @vanElsas2013 finds inaccuracy due to forgetfulness, nonattitudes, and cognitive bias.
 
 The important aspect of this estimation is the coefficients and the uncertainty around them. In a sense, all that the survey does is train a model that in the next step is applied to a new dataset that is more geographically- and demographically-correct.
 
-<!-- [^betterinformthedivisionsfootnote]: **TODO:** We can better inform the divisions coefficient here, but adding a layer so that it defaults to past vote.  -->
+<!-- [^aessfootnote]: **TODO:** Can we inform gender and age and education based on AES 2016 results? -->
 
-<!-- [^nestbystatesyounumpyfootnote]: **TODO:** Need to nest by state you numpy. You forgot to do this and Lauren noticed. Anyway she was nice about it and didn't make a scene, but also helpfully pointed out that it may be something that would allow us to speak to state-differences in the small state-specific independent that runs e.g. Lambia in Tassie, Xenophon in SA, or ONA/Palmer/etc in QLD. This was also a Michael point. -->
+<!-- [^nestbystatesyounumpyfootnote]: **TODO:** Need to nest by state. This would also allow us to speak to state-differences in the small state-specific independent that runs e.g. Lambia in Tassie, Xenophon in SA, or ONA/Palmer/etc in QLD. -->
+
+<!-- [^alexfootnote]: **TODO:** Alex wants justification for the coefficient selections. Maybe could look at AES or something. -->
+
 
 Equation \ref{eq:poststratification} is the post-stratification equation: 
 \begin{eqnarray} 
@@ -522,6 +527,8 @@ We estimate our model using Stan [@StanCitation2017] via the brms [@brmspackage]
 
 
 # Results
+
+Here we discuss our core results. Variations and alternatives are discussed in  Appendix \ref{variants}. This includes, only generating state estimates, examining first-preferences, and considering alternative preferences models.
 
 ## Individual-level model
 
@@ -593,12 +600,14 @@ knitr::include_graphics(here::here("outputs/figures/estimates/actual_vs_estimate
 
 If the central estimate from our model aligned with the actual outcome then the point would lie on the 45 degree line, indicated by the dotted line in Figure \ref{fig:figureactualvsestimates}. Points that are above that line suggest our model over-estimates the Australian Labor Party's share of first preferences and two party-preferred votes, respectively. 
 
+The Life in Australia first-preferences estimates are fairly similar across the divisions. This may be due to the large amount of 'sharing' that is happening in the model, due to the relatively small sample size on an electoral-division basis. The Smartvote Australia first-preferences estimates are more appropriately distributed. However there is a clear over-estimate of the Australian Labor Party share.
+
 
 ## Overall results
 
-Probabilistic forecasts are notoriously difficult to interpret (for instance, see @morss2010examining, @morss2008communicating, @patt2003using, or @mislavsky2019combining). However, in Australia there is a commonly used framework for describing how 'safe' an electoral division is. One way to better communicate our results is to translate our central estimates into this framework. Table \ref{tab:bothoutcomesbyclass} classifies the two-party-preferred share for both our model estimates and the actual outcomes into commonly used descriptive tranches.
+Probabilistic forecasts are notoriously difficult to interpret (for instance, see @morss2010examining, @morss2008communicating, @patt2003using, or @mislavsky2019combining). However, in Australia there is a commonly used classification system for describing how 'safe' an electoral division is. One way to better communicate our results is to translate our central estimates into these classifications. Table \ref{tab:bothoutcomesbyclass} groups the two-party-preferred share for both our model estimates and the actual outcomes into descriptive classifications based on this classification system.
 
-The classifications used by the Australian Electoral Commission are usually used only on actual results, and so we adjust the central classification in a way that is more explicit about uncertainty. Specifically: 'safe loss' means a two-party-preferred share of less than 0.4; 'fairly safe loss' means between 0.4 and 0.44; 'marginal loss' means between 0.44 and 0.47; 'too close to call' means between 0.47 and 0.53; 'marginal win' means between 0.53 and 0.56; 'fairly safe win' means between 0.56 and 0.6; and finally, 'safe win' means a two-party-preferred share greater than 0.6. Table \ref{tab:haveagoyougetago} shows this disaggregation. Using this classification,  estimates based on the Life in Australia dataset tend to be more accurate than those based on the Smartvote Australia dataset. 
+The classifications used by the Australian Electoral Commission are usually used only on actual results, and so we adjust them in a way that better considers uncertainty. Specifically: 'safe loss' means a two-party-preferred share of less than 0.4; 'fairly safe loss' means between 0.4 and 0.44; 'marginal loss' means between 0.44 and 0.47; 'too close to call' means between 0.47 and 0.53; 'marginal win' means between 0.53 and 0.56; 'fairly safe win' means between 0.56 and 0.6; and finally, 'safe win' means a two-party-preferred share greater than 0.6. Table \ref{tab:haveagoyougetago} shows this disaggregation. Using this classification,  estimates based on the Life in Australia dataset tend to be more accurate than those based on the Smartvote Australia dataset. 
 
 
 
@@ -670,12 +679,14 @@ kable(both,
 
 # Discussion
 
+In this section we evaluate our approach fits within the context of the framework that we established. We then compare the survey inputs and their appropriateness for the task that we have attempted. Finally, we go into the weaknesses and limitations of our approach, and conclude with some next steps.
+
 
 ## Evaluation within the context of the framework
 
 
 In terms of providing electoral division counts, our results highlight the benefits of combining raw individual-level political opinion polling data, with large public datasets and a quantitative model.
-<!-- [^justifythis]  -->
+<!-- [^justifythis] -->
 Our model is able to provide forecasts that are directly related to the actual outcome of interest in elections for multi-district systems: the number of electoral divisions won by each party. Furthermore, similar approaches to ours have also found that they were able to obtain reasonable electoral-division-level results. For instance, in Australia, @jackman2019small use a dataset of opinions about same-sex marriage from a 2016 voter advice application with an MRP approach to construct estimates of support in the, then, 150 Australian electoral divisions, and compare their results favourably to the 2017 plebiscite on same-sex marriage. Of more relevance in terms of trying to forecasting election outcomes is @lauderdale2017model who apply a similar model to ours to the UK and the US; and @munzert2017forecasting who analyse constituency level results in Germany. Our model is interpretable and provides probabilistic outputs. However our model does not draw on all available evidence, as it is deliberately parsimonious.
 
 <!-- [^justifythis]: **TODO:** John and Ben recommended adding a paragraph (not here, just somewhere) where we 1) better show how the current polling isn't working; 2) actually give them some credit because they don't actually do too badly; and 3) address attempts to use traditional methods to give seat counts, e.g. the Grenier website in Canada (the issue/weakness is that consistent swings are assumed): https://www.cbc.ca/news/politics/grenier-vote-seat-methodology-1.4054947#seats. Also add as justification for paper: -->
@@ -695,7 +706,7 @@ Replicability is a more onerous requirement than reproducibility, and that is fo
 The approach that we implemented addresses this aspect by adopting the commonly used classifier of how safe an electoral division is. The advantage of this approach is that there is a natural 'too close to call' category that is inseparable from the rest of the results. 
 
 
-For reasons that are not clear, much of the political opinion polling literature and practice is focused on trying to forecast results that are only correlated with who wins the election rather than who wins the election. For instance, forecasting the popular vote in the US, rather than the Electoral College, or nation-wide preferences in Australia, Canada, and the UK, rather than seat counts. Our results show that there is no need to do this and that widespread adoption of political opinion polling that focused on seat counts would bring substantial improvements. Nonetheless the reality of the situation is that an approach that was either considerably slower or more costly than the traditional alternatives would not be widely accepted.
+For reasons that are not clear, much of the political opinion polling literature and practice is focused on trying to forecast results that are only correlated with who wins the election rather than who wins the election. For instance, forecasting the popular vote in the US, rather than the Electoral College, or nation-wide preferences in Australia, Canada, and the UK, rather than seat counts. @McNair1983 discusses the history of polling in Australia in terms of what was done, rather than why. Our results show that there is no need to do this and that widespread adoption of political opinion polling that focused on seat counts would bring substantial improvements. Nonetheless the reality of the situation is that an approach that was either considerably slower or more costly than the traditional alternatives would not be widely accepted.
 
 
 @rothschild2015combining, @goel2015non and @konitzerpolitical are similar to us in terms of approach, motivation, and philosophy. They look at political opinion polling in a US context and find significant room for improvement. Significantly they argue that an approach that is similar to ours is neither more costly, nor slower.
@@ -716,13 +727,7 @@ Additionally, our use of a model-based pipeline means that once the model has be
 
 Our paper is also about examining how MRP performs given surveys with different characteristics. Comparing the results of our model when we consider two different inputs. The first was a small sample designed to roughly match the Australian adult population, and the second was a self-selected voter advice application. The results of our model suggest that a larger sample than is typically used would be beneficial. In this way, our results are similar to @ButticeHighton2013 who perform this exercise in a more focused manner.
 
-One interesting aspect of our approach is the consideration of preferences. Preferential, but compulsory, voting is one way in which the Australian system is different to that of the Canada, the UK and the US. It removes considerable complexity to just consider the first-preferences results. Similarly, many surveys only have information on the state of the respondent, instead of their electoral division. Considering these two variants is worthwhile as they expand the potential use cases of the approach. 
-<!-- They are implemented in Appendix \ref{variants}. -->
-
-
-
-
-
+One interesting aspect of our approach is the consideration of preferences. Preferential, but compulsory, voting is one way in which the Australian system is different to that of the Canada, the UK and the US. It removes considerable complexity to just consider the first-preferences results. Similarly, many surveys only have information on the state of the respondent, instead of their electoral division. Considering these two variants is worthwhile as they expand the potential use cases of the approach and they are implemented in Appendix \ref{variants}.
 
 
 
@@ -1022,19 +1027,25 @@ We now have post-stratified estimates for each division. From here you could com
 
 
 
-<!-- \newpage -->
+\newpage
 
-<!-- # Variants -->
+# Variants
 
-<!-- ## State-based-geography -->
-<!-- **TBD** -->
+## State-based-geography
+**TBD**
 
-<!-- Redo with similar model, but only take state inputs, not electoral-division. Likely would increase the number of survey inputs available. -->
+Redo with similar model, but only take state inputs, not electoral-division. Likely would increase the number of survey inputs available.
 
-<!-- ## First-preferences only -->
-<!-- **TBD** -->
+## First-preferences only
+**TBD**
 
-<!-- Redo just considering first-preferences. Substantial decrease in complexity and uncertainty, but what is the tradeoff in terms of accuracy? -->
+Redo just considering first-preferences. Substantial decrease in complexity and uncertainty, but what is the tradeoff in terms of accuracy?
+
+## Alternative preferences
+**TBD**
+
+Patrick wants to see what happens if we use the actual 2019 preferences.
+
 
 \normalsize
 

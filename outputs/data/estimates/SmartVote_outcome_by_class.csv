@@ -1,7 +1,7 @@
 Estimated/Actual,Safe loss,Fairly safe loss,Marginal loss,Too close to call,Marginal win,Fairly safe win,Safe win
 Fairly safe loss,8,1,0,1,0,0,0
-Marginal loss,8,2,0,0,0,0,0
-Too close to call,21,6,8,2,2,0,0
-Marginal win,5,7,5,7,1,1,0
-Fairly safe win,0,2,2,7,8,11,3
-Safe win,0,0,0,2,1,5,25
+Marginal loss,9,2,0,0,0,0,0
+Too close to call,20,6,6,2,1,0,0
+Marginal win,4,7,7,7,1,1,0
+Fairly safe win,1,2,2,7,9,11,2
+Safe win,0,0,0,2,1,5,26

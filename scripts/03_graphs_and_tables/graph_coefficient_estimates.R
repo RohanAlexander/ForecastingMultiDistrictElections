@@ -1,8 +1,8 @@
 library(tidybayes)
 library(tidyverse)
 
-SmartVote_model <- readRDS("outputs/models/SmartVote.rds")
-LinA_model <- readRDS("outputs/models/LinA.rds")
+SmartVote_model <- readRDS("outputs/models/SmartVote_divs.rds")
+LinA_model <- readRDS("outputs/models/LinA_divs.rds")
 
 
 

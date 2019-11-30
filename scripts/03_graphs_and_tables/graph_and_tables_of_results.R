@@ -116,6 +116,8 @@ ggsave("outputs/figures/estimates/raw_data_compared_with_model_estimates.pdf",
 post_stratified_estimates_summary <- read_csv("outputs/data/estimates/estimates.csv") %>% 
   select(type, division, forecast_type, actual_type)
 
+
+
 # LinA
 post_stratified_estimates_summary %>% 
   filter(type == "LinA") %>% 

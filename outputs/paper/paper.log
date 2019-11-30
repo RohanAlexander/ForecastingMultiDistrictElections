@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  26 NOV 2019 21:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  1 DEC 2019 09:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -658,36 +658,37 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <11> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 207.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 242.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 241.
+LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <12> not available
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 241.
 [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 [4] [5] [6]
 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections/inp
-uts/misc/example_ballot_paper.png, id=242, 424.58624pt x 1055.945pt>
+uts/misc/example_ballot_paper.png, id=260, 424.58624pt x 1055.945pt>
 File: /Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElection
 s/inputs/misc/example_ballot_paper.png Graphic file (type png)
 <use /Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections
 /inputs/misc/example_ballot_paper.png>
 Package pdftex.def Info: /Users/rohanalexander/Documents/projects/ForecastingMu
 ltiDistrictElections/inputs/misc/example_ballot_paper.png  used on input line 3
-29.
+31.
 (pdftex.def)             Requested size: 130.76518pt x 325.21272pt.
 [7] [8 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElecti
 ons/inputs/misc/example_ballot_paper.png>]
 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections/out
-puts/figures/map.pdf, id=277, 568.1225pt x 284.06125pt>
+puts/figures/map.pdf, id=295, 568.1225pt x 284.06125pt>
 File: /Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElection
 s/outputs/figures/map.pdf Graphic file (type pdf)
 <use /Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections
 /outputs/figures/map.pdf>
 Package pdftex.def Info: /Users/rohanalexander/Documents/projects/ForecastingMu
-ltiDistrictElections/outputs/figures/map.pdf  used on input line 346.
+ltiDistrictElections/outputs/figures/map.pdf  used on input line 348.
 (pdftex.def)             Requested size: 469.7731pt x 234.88654pt.
-[9 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections/
-outputs/figures/map.pdf>]
+[9]
 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections/out
-puts/figures/firstpreferencesvotesdensityconsistentdivision_alt.pdf, id=300, 56
+puts/figures/firstpreferencesvotesdensityconsistentdivision_alt.pdf, id=310, 56
 8.1225pt x 284.06125pt>
 File: /Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElection
 s/outputs/figures/firstpreferencesvotesdensityconsistentdivision_alt.pdf Graphi
@@ -696,12 +697,12 @@ c file (type pdf)
 /outputs/figures/firstpreferencesvotesdensityconsistentdivision_alt.pdf>
 Package pdftex.def Info: /Users/rohanalexander/Documents/projects/ForecastingMu
 ltiDistrictElections/outputs/figures/firstpreferencesvotesdensityconsistentdivi
-sion_alt.pdf  used on input line 372.
+sion_alt.pdf  used on input line 374.
 (pdftex.def)             Requested size: 469.7731pt x 234.88654pt.
 [10 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections
-/outputs/figures/firstpreferencesvotesdensityconsistentdivision_alt.pdf>]
+/outputs/figures/map.pdf>]
 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections/out
-puts/figures/twoPP_vs_primary_consistentdivision.pdf, id=317, 568.1225pt x 284.
+puts/figures/twoPP_vs_primary_consistentdivision.pdf, id=329, 568.1225pt x 284.
 06125pt>
 File: /Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElection
 s/outputs/figures/twoPP_vs_primary_consistentdivision.pdf Graphic file (type pd
@@ -710,12 +711,14 @@ f)
 /outputs/figures/twoPP_vs_primary_consistentdivision.pdf>
 Package pdftex.def Info: /Users/rohanalexander/Documents/projects/ForecastingMu
 ltiDistrictElections/outputs/figures/twoPP_vs_primary_consistentdivision.pdf  u
-sed on input line 386.
+sed on input line 388.
 (pdftex.def)             Requested size: 469.7731pt x 234.88654pt.
 [11 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections
-/outputs/figures/twoPP_vs_primary_consistentdivision.pdf>] [12] [13] [14]
+/outputs/figures/firstpreferencesvotesdensityconsistentdivision_alt.pdf>] [12 <
+/Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections/outp
+uts/figures/twoPP_vs_primary_consistentdivision.pdf>] [13] [14]
 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections/out
-puts/figures/proportions_by_subgroup_density_corrected_divisions.pdf, id=374, 5
+puts/figures/proportions_by_subgroup_density_corrected_divisions.pdf, id=392, 5
 68.1225pt x 284.06125pt>
 File: /Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElection
 s/outputs/figures/proportions_by_subgroup_density_corrected_divisions.pdf Graph
@@ -724,34 +727,32 @@ ic file (type pdf)
 /outputs/figures/proportions_by_subgroup_density_corrected_divisions.pdf>
 Package pdftex.def Info: /Users/rohanalexander/Documents/projects/ForecastingMu
 ltiDistrictElections/outputs/figures/proportions_by_subgroup_density_corrected_
-divisions.pdf  used on input line 477.
+divisions.pdf  used on input line 479.
 (pdftex.def)             Requested size: 469.7731pt x 234.88654pt.
 [15 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections
 /outputs/figures/proportions_by_subgroup_density_corrected_divisions.pdf>] [16]
 
-Overfull \hbox (39.2635pt too wide) in alignment at lines 516--519
+Overfull \hbox (39.2635pt too wide) in alignment at lines 518--521
  [][][] []
  []
 
 [17]
-Overfull \hbox (36.08865pt too wide) in paragraph at lines 545--561
+Overfull \hbox (36.08865pt too wide) in paragraph at lines 549--565
  [][] 
  []
 
 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections/out
-puts/figures/coefficientdistributions.pdf, id=454, 568.1225pt x 284.06125pt>
+puts/figures/coefficientdistributions.pdf, id=476, 568.1225pt x 284.06125pt>
 File: /Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElection
 s/outputs/figures/coefficientdistributions.pdf Graphic file (type pdf)
 <use /Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections
 /outputs/figures/coefficientdistributions.pdf>
 Package pdftex.def Info: /Users/rohanalexander/Documents/projects/ForecastingMu
 ltiDistrictElections/outputs/figures/coefficientdistributions.pdf  used on inpu
-t line 565.
+t line 569.
 (pdftex.def)             Requested size: 469.7731pt x 234.88654pt.
-[18 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections
-/outputs/figures/coefficientdistributions.pdf>]
 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections/out
-puts/figures/estimates/raw_data_compared_with_model_estimates.pdf, id=468, 568.
+puts/figures/estimates/raw_data_compared_with_model_estimates.pdf, id=478, 568.
 1225pt x 568.1225pt>
 File: /Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElection
 s/outputs/figures/estimates/raw_data_compared_with_model_estimates.pdf Graphic 
@@ -760,10 +761,11 @@ file (type pdf)
 /outputs/figures/estimates/raw_data_compared_with_model_estimates.pdf>
 Package pdftex.def Info: /Users/rohanalexander/Documents/projects/ForecastingMu
 ltiDistrictElections/outputs/figures/estimates/raw_data_compared_with_model_est
-imates.pdf  used on input line 580.
+imates.pdf  used on input line 584.
 (pdftex.def)             Requested size: 469.7731pt x 469.7731pt.
+[18]
 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections/out
-puts/figures/estimates/actual_vs_estimates.pdf, id=475, 568.1225pt x 284.06125p
+puts/figures/estimates/actual_vs_estimates.pdf, id=493, 568.1225pt x 284.06125p
 t>
 File: /Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElection
 s/outputs/figures/estimates/actual_vs_estimates.pdf Graphic file (type pdf)
@@ -771,177 +773,164 @@ s/outputs/figures/estimates/actual_vs_estimates.pdf Graphic file (type pdf)
 /outputs/figures/estimates/actual_vs_estimates.pdf>
 Package pdftex.def Info: /Users/rohanalexander/Documents/projects/ForecastingMu
 ltiDistrictElections/outputs/figures/estimates/actual_vs_estimates.pdf  used on
- input line 595.
+ input line 599.
 (pdftex.def)             Requested size: 469.7731pt x 234.88654pt.
-[19] [20 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElec
-tions/outputs/figures/estimates/raw_data_compared_with_model_estimates.pdf>]
-Overfull \hbox (11.5269pt too wide) in paragraph at lines 635--635
+[19 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections
+/outputs/figures/coefficientdistributions.pdf>] [20 </Users/rohanalexander/Docu
+ments/projects/ForecastingMultiDistrictElections/outputs/figures/estimates/raw_
+data_compared_with_model_estimates.pdf>]
+Overfull \hbox (11.5269pt too wide) in paragraph at lines 641--641
  []|\T1/ppl/m/n/12 Marginal
  []
 
 
-Overfull \hbox (11.5269pt too wide) in paragraph at lines 635--635
+Overfull \hbox (11.5269pt too wide) in paragraph at lines 641--641
  []|\T1/ppl/m/n/12 Marginal
  []
 
 [21 </Users/rohanalexander/Documents/projects/ForecastingMultiDistrictElections
-/outputs/figures/estimates/actual_vs_estimates.pdf>] [22] [23]
-Overfull \hbox (13.71666pt too wide) in paragraph at lines 697--698
+/outputs/figures/estimates/actual_vs_estimates.pdf>] [22] [23] [24]
+Overfull \hbox (13.71666pt too wide) in paragraph at lines 705--706
 []\T1/ppl/m/n/12 In terms of the data that we use, one of the most no-table is-
 sues with our post-stratification
  []
 
-[24] [25] [26]
+[25] [26] [27]
 
-Package xcolor Warning: Incompatible color definition on input line 729.
+Package xcolor Warning: Incompatible color definition on input line 737.
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 730.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 738.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 731.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 739.
 
-Package xcolor Warning: Incompatible color definition on input line 734.
-
-
-Package xcolor Warning: Incompatible color definition on input line 734.
+Package xcolor Warning: Incompatible color definition on input line 742.
 
 
-Package xcolor Warning: Incompatible color definition on input line 738.
+Package xcolor Warning: Incompatible color definition on input line 742.
 
 
-Package xcolor Warning: Incompatible color definition on input line 754.
+Package xcolor Warning: Incompatible color definition on input line 746.
 
 
-Package xcolor Warning: Incompatible color definition on input line 754.
+Package xcolor Warning: Incompatible color definition on input line 762.
 
 
-Package xcolor Warning: Incompatible color definition on input line 758.
+Package xcolor Warning: Incompatible color definition on input line 762.
 
 
-Package xcolor Warning: Incompatible color definition on input line 778.
+Package xcolor Warning: Incompatible color definition on input line 766.
 
 
-Package xcolor Warning: Incompatible color definition on input line 778.
-
-[27]
-
-Package xcolor Warning: Incompatible color definition on input line 787.
+Package xcolor Warning: Incompatible color definition on input line 786.
 
 
-Package xcolor Warning: Incompatible color definition on input line 795.
-
-
-Package xcolor Warning: Incompatible color definition on input line 795.
-
-
-Package xcolor Warning: Incompatible color definition on input line 805.
-
-
-Package xcolor Warning: Incompatible color definition on input line 822.
-
-
-Package xcolor Warning: Incompatible color definition on input line 822.
-
-
-Package xcolor Warning: Incompatible color definition on input line 826.
-
-
-Package xcolor Warning: Incompatible color definition on input line 861.
-
-
-Package xcolor Warning: Incompatible color definition on input line 861.
-
-
-Package xcolor Warning: Incompatible color definition on input line 861.
+Package xcolor Warning: Incompatible color definition on input line 786.
 
 [28]
 
-Package xcolor Warning: Incompatible color definition on input line 861.
+Package xcolor Warning: Incompatible color definition on input line 795.
 
 
-Package xcolor Warning: Incompatible color definition on input line 861.
+Package xcolor Warning: Incompatible color definition on input line 803.
 
 
-Package xcolor Warning: Incompatible color definition on input line 865.
+Package xcolor Warning: Incompatible color definition on input line 803.
 
 
-Package xcolor Warning: Incompatible color definition on input line 901.
+Package xcolor Warning: Incompatible color definition on input line 813.
 
 
-Package xcolor Warning: Incompatible color definition on input line 901.
+Package xcolor Warning: Incompatible color definition on input line 830.
 
 
-Package xcolor Warning: Incompatible color definition on input line 901.
+Package xcolor Warning: Incompatible color definition on input line 830.
+
+
+Package xcolor Warning: Incompatible color definition on input line 834.
+
+
+Package xcolor Warning: Incompatible color definition on input line 869.
+
+
+Package xcolor Warning: Incompatible color definition on input line 869.
+
+
+Package xcolor Warning: Incompatible color definition on input line 869.
 
 [29]
 
-Package xcolor Warning: Incompatible color definition on input line 901.
+Package xcolor Warning: Incompatible color definition on input line 869.
 
 
-Package xcolor Warning: Incompatible color definition on input line 901.
+Package xcolor Warning: Incompatible color definition on input line 869.
 
 
-Package xcolor Warning: Incompatible color definition on input line 905.
+Package xcolor Warning: Incompatible color definition on input line 873.
+
+
+Package xcolor Warning: Incompatible color definition on input line 909.
+
+
+Package xcolor Warning: Incompatible color definition on input line 909.
+
+
+Package xcolor Warning: Incompatible color definition on input line 909.
+
+[30]
+
+Package xcolor Warning: Incompatible color definition on input line 909.
+
+
+Package xcolor Warning: Incompatible color definition on input line 909.
 
 
 Package xcolor Warning: Incompatible color definition on input line 913.
 
 
-Package xcolor Warning: Incompatible color definition on input line 913.
+Package xcolor Warning: Incompatible color definition on input line 921.
 
 
-Package xcolor Warning: Incompatible color definition on input line 917.
+Package xcolor Warning: Incompatible color definition on input line 921.
 
 
-Package xcolor Warning: Incompatible color definition on input line 931.
+Package xcolor Warning: Incompatible color definition on input line 925.
 
 
-Package xcolor Warning: Incompatible color definition on input line 931.
-
-[30] (./paper.bbl [31] [32]
-Underfull \hbox (badness 6575) in paragraph at lines 200--206
-[]\T1/ppl/m/n/12 Jackman, S., Rat-cliff, S., and Man-sillo, L. (2019).  \T1/ppl
-/m/it/12 Small area es-ti-mates of
- []
+Package xcolor Warning: Incompatible color definition on input line 939.
 
 
-Underfull \hbox (badness 3364) in paragraph at lines 200--206
-\T1/ppl/m/it/12 pub-lic opin-ion: Model-assisted post-stratification of data fr
-om voter ad-vice ap-pli-ca-
- []
+Package xcolor Warning: Incompatible color definition on input line 939.
 
-
-Underfull \hbox (badness 4001) in paragraph at lines 200--206
-\T1/ppl/m/it/12 tions\T1/ppl/m/n/12 .  Pa-per pre-sented at 2019 An-nual Asian 
-Po-lit-i-cal Method-ol-ogy Meet-
- []
-
-[33] [34] [35])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 947.
-[36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 947.
+[31]
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 951.
+[32] (./paper.bbl [33] [34] [35] [36] [37])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 981.
+[38]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 981.
 (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 947.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 947.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 981.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 981.
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: EC9BE5CB331DBF848BC45833D86FD6B1;4103.
+(rerunfilecheck)             Checksum: 963ED9EDD0718B1C562EA21855768E72;4660.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.7201pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 947.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 981.
  ) 
 Here is how much of TeX's memory you used:
- 14568 strings out of 492649
- 215751 string characters out of 6129622
- 322682 words of memory out of 5000000
- 18018 multiletter control sequences out of 15000+600000
- 53883 words of font info for 122 fonts, out of 8000000 for 9000
+ 14597 strings out of 492649
+ 216178 string characters out of 6129622
+ 322938 words of memory out of 5000000
+ 18033 multiletter control sequences out of 15000+600000
+ 56928 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,42p,1754b,577s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,11n,42p,1754b,573s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
@@ -954,12 +943,13 @@ exmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2018/texmf
 ist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2018/texmf-dis
 t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts
 /type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
-urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/pal
-atino/uplri8a.pfb>
-Output written on paper.pdf (36 pages, 676842 bytes).
+urw/palatino/uplbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/pa
+latino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/palatino/
+uplri8a.pfb>
+Output written on paper.pdf (38 pages, 692074 bytes).
 PDF statistics:
- 736 PDF objects out of 1000 (max. 8388607)
- 662 compressed objects within 7 object streams
- 182 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 791 PDF objects out of 1000 (max. 8388607)
+ 713 compressed objects within 8 object streams
+ 193 named destinations out of 1000 (max. 500000)
+ 265 words of extra memory for PDF output out of 10000 (max. 10000000)
 
